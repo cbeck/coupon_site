@@ -1,0 +1,12 @@
+<% @title = "Edit #{@domain.name}" %>
+
+<% form_for(@domain) do |f| %>
+  <%= f.error_messages %>
+  <%= render :partial => "form", :object => f %>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'View this domain', @domain %> |
+<%= link_to 'Cancel and go back to domains list', domains_path %>

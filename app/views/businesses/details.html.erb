@@ -1,0 +1,96 @@
+<%= render :partial => "shared/large_coupon_css"%>
+<%=render :partial => 'businesses/googlemap', :locals => {:location => @business.location}%>
+
+<div class="right share margin_top_10"> 
+  <script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#publisher=d391baeb-b669-4a19-89bb-1cf8c9b969f3&amp;type=website&amp;style=rotate"></script>
+</div>
+<h4 class="regular">Available Coupons for <%=h @business.name %> in <%= @business.location.postal_code %></h4>
+
+<div id="details_container">
+  <div id="business_details">
+    <div class="third_span">
+      <% if google_maps?(@business.location) -%>
+      <div class="map_with_logo">
+      	<div id="map" class="thin"></div>
+    		<% if @business.logo? %>
+    		  <div class="business_logo"><%= small_link @business.logo, :width => 220 %></div>
+    		<% end %>
+    	</div>
+      <% end -%>
+    </div>
+  
+    <div class="third_span">
+      <h3 class="first"><%=h @business.name %></h3>
+			<%=render :partial => 'businesses/location', :object => @business.location %>
+
+			<% unless @business.phones.empty? -%>			
+				<% for phone in @business.phones -%>
+					<p><strong><%=phone.phone_type%>:</strong> <%=phone.formatted_number %></p>
+				<% end -%>
+			<% end -%>
+
+			<% unless @business.emails.empty? -%>
+			  <% for email in @business.emails -%>					
+					<p><strong><%= (email.label.blank?) ? email.label : "Email" -%>:</strong> <%= mail_to email.address %></p>
+				<% end -%>
+			<% end -%>
+
+			<% unless @business.urls.empty? -%>
+				<% for website in @business.urls -%>
+					<p><strong>Web:</strong> <%= link_to website.url, website.url, :target => '_new' %></p>
+				<% end -%>
+			<% end -%>
+
+			<% if nil && @business.schedule? -%>
+			<div class="info_block">
+				<h3>Hours</h3>
+				<%=render :partial => 'businesses/schedule', :object => @business.schedule %>
+			</div>
+			<% end -%>
+			
+    </div>
+  
+    <div class="third_span last">
+      <% unless @business.main_description.blank? %>
+      <div id='business_description' class="side_box">
+        <h3>About Us</h3>
+        <p><%= @business.main_description %></p>
+      </div>
+      <% end %>
+      <% if @business.photos? %>
+    	<div id='business_images' class="side_box">
+    	  <h3>Photos</h3>
+    		<p align="center">
+    		<% for image in @business.photos -%>
+    			<%= thumb_link image, :width => 75 %>
+    		<% end -%>
+    		</p>
+    	</div>
+    	<% end -%>
+    	<div id="keywords" class="side_box">
+    	<h3>Keywords</h3>
+  		  <p><%=[@account.tags, @business.tags].flatten.join(', ') %></p>
+  		</div>
+    </div>
+    
+		<div class="clear_fix">&nbsp;</div>
+  </div>
+  <div id="mini_coupons_container">
+    <div id="mini_coupons_top">
+      <div id="mini_coupons">
+        <% unless @business.available_coupons.blank? %>
+          <ul>
+          <%= render :partial => "shared/small_coupon", :collection => @business.available_coupons %>
+          </ul>
+        <% else %>
+          <p><%= @business.name %> is not currently offering any coupons. Check back soon!</p>
+        <% end %>      
+      </div>
+      <div class="clear_fix">&nbsp;</div>
+    </div>
+  </div>
+  <div class="clear_fix">&nbsp;</div>
+</div>
+
+
+

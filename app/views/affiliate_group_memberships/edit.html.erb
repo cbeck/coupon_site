@@ -1,0 +1,24 @@
+<h1>Editing affiliate_group_membership</h1>
+
+<% form_for(@affiliate_group_membership) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :affiliate_id %><br />
+    <%= f.text_field :affiliate_id %>
+  </p>
+  <p>
+    <%= f.label :affilitate_group_id %><br />
+    <%= f.text_field :affilitate_group_id %>
+  </p>
+  <p>
+    <%= f.label :active %><br />
+    <%= f.check_box :active %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @affiliate_group_membership %> |
+<%= link_to 'Back', affiliate_group_memberships_path %>

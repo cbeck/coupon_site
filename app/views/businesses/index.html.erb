@@ -1,0 +1,16 @@
+<% @title = "Business Locations for #{@account.name} (#{@account.billing_name}) #{link_to(image_tag('add.png'), new_account_business_path(@account), :title => 'Add new location')}" %>
+
+<table id="items" class="data">
+	<tr>
+	  <th width="50"></th>
+		<th width="210" align="left">Name</th>
+		<th width="250" align="left">Location</th>
+		<th width="140" align="left">Phone</th>
+		<th></th>
+	</tr>
+	<%= render :partial => @businesses %>
+</table>
+<%= will_paginate @businesses %>
+
+<p class="margin_top_10"><%= link_to 'New business location', new_account_business_path(@account) %></p>
+

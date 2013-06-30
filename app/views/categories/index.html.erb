@@ -1,0 +1,23 @@
+<h4 class="regular">Browse By Category</h4>
+
+<div id="details_container">
+  <div id="browse_details">
+    <h3>Start by selecting a main category...</h3>
+  </div>
+  <div id="mini_coupons_container">
+    <div id="mini_coupons_top">
+      <div id="mini_coupons">
+        <ul>
+        <% @categories.each do |cat| %>
+        	<li><%=link_to cat.name.humanize, category1_path(cat) %></li>
+        <% end %>
+        </ul>
+      </div>
+      <div class="clear_fix">&nbsp;</div>
+    </div>
+  </div>
+  <div class="clear_fix">&nbsp;</div>
+</div>
+
+
+

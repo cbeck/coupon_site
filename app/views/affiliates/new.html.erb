@@ -1,0 +1,27 @@
+<% @title = "New affiliate" %>
+
+<% form_for(@affiliate) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :billable %><br />
+    <%= f.check_box :billable %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :internal_identifier %><br />
+    <%= f.text_field :internal_identifier %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Cancel and go back to affiliates list', affiliates_path %>

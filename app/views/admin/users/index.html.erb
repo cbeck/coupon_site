@@ -1,0 +1,28 @@
+<% @title = "Users #{link_to image_tag('add.png'), new_admin_user_path, :title => 'Add new user'}" %>
+
+<%= render :partial => "shared/admin_menu"%>
+
+<table id="items" class="data">
+	<tr>
+	  <th width="50">ID</th>
+		<th width="350" align="left">Email</th>
+		<th width="50" align="right">Zip</th>
+		<th width="150" align="right">Created</th>
+	</tr>
+  <% @users.each do |user| %>
+	<tr class="<%= cycle('odd', 'even') -%>">
+	  <td><%=user.id%></td>
+    <td align="left"><%=link_to user.email, [:admin, user] %>  <%= "(admin)" if user.admin? %></td>
+    <td align="right"><%=user.zip%></td>
+    <td align="right"><%=time_ago_in_words(user.created_at)%> ago</td>
+	</tr>
+  <% end %>
+</table>
+<%= will_paginate @users %>
+
+<p class="margin_top_10">
+<%= link_to 'New User', new_admin_user_path %>
+</p>
+
+<div class="clear_fix"></div>
+

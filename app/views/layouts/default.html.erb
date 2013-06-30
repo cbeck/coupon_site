@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title><%= h(yield(:title) || render_site_name) %></title>
+    <%= stylesheet_link_tag('styles','modalbox', :media => :all) unless @skip_formatting %>
+    <%= theme_stylesheet_link_tag @current_theme, 'styles' unless @skip_formatting %>
+    <%= stylesheet_link_tag('print', :media => :print) %>
+    <!--[if IE]>
+      <%= stylesheet_link_tag "ie_stinks", :media => "all" %>
+    <![endif]-->
+    <%= javascript_include_tag :all, :cache => true %>
+    <%= calendar_date_select_includes "silver" %>
+    <%= yield(:head) %>
+		<%= yield :page_scripts -%>
+  	<%= yield :page_css -%>  
+</head>
+<% current_page = "#{controller.controller_name}_#{controller.action_name}"%>
+<body id="<%= current_page -%>" <%=yield :body_events-%>>
+   <!-- begin div.ajax-notice -->
+   	<div id="flasherrors" style="display:none;">
+   	</div>
+   	<div id="flashnotice" style="display:none;">
+   	</div>
+   	<!-- end div.ajax-notice -->
+		<div id="container">
+			<div id="header" class="hide">
+			  <div id="header_top_container">
+			    <div id="main_nav">
+    			  <%= show_ajax_flash_messages %>
+    				<% if request.path == login_path || request.path == '/session' -%>
+    					<%=link_to 'Signup', signup_path %>
+    				<% else -%>
+    					<% if logged_in? %>
+    						<%= "#{link_to_unless_current 'Admin', admin_path} |" if current_user.admin? %>  
+    						<%= link_to_unless_current('My account', myaccount_path)%> |
+    						<%= link_to_unless_current('My clipped coupons', user_clipped_coupons_path(current_user))%> |
+    						<%= link_to('Logout', logout_path) %>
+    					<% else -%>
+    						<%=link_to('Signup', signup_path) %> |
+    						<%=link_to('Login', login_path) %>
+    					<% end -%>
+    				<% end -%>
+    			</div>
+    			<h1 id="site_name"><%= render_site_name %></h1>
+    			<%= link_to theme_image_tag('header_logo.png'), home_path, :id=>"logo" %>
+  			</div>
+  			<div id="header_bottom_container">
+  			  <%= yield :header_text -%>
+    			<div id="search_container">
+  				  <%= render :partial => 'search/form' if @show_search %>
+  				</div>
+  				<% if current_page == 'search_new' %>
+  				  <%= image_tag('bkg_coupons_top.png', :id=>'coupons_top')  %>
+  				<% else %>
+  				  <%= image_tag('bkg_coupons_top_small.png', :id=>'coupons_top')%>
+  				  <div id="piggy"><%= theme_image_tag('lil_piggy.png')%></div>
+  				<% end %>
+				</div>				
+			</div>
+			
+			<div id="canvas" class="clearfix">
+			  <% if @add_layout %>
+			    <%= render_title  %>
+			    <%= render_header %>
+			  <% end %>
+				<div id="sidebar">
+					<%= yield :sidebar%>
+				</div>
+				<div id="flash_msg"><%= flash[:notice] %></div>
+		    <%= yield %>
+		    <%= render_footer if @add_layout %>
+			</div>
+			
+
+		</div>
+		<div id="footer" class="hide">
+		  <div id="footer_container">
+		    <div class="left">
+				  <%= link_to "Home", home_path %> :
+				  <%= link_to "About", about_path %> :
+				  <%= link_to "Business Owners", business_owners_path %> :
+				  <%= link_to "Privacy Policy", privacy_path %> :
+				  <%= link_to "Terms of Use", terms_path %> :
+				  <%= link_to "Contact", contact_us_path %> :
+				  <% if logged_in? %>
+						<%= "#{link_to_unless_current 'Admin', admin_path} :" if current_user.admin? %>  
+						<%= link_to_unless_current('My Account', myaccount_path)%> :
+						<%= link_to_unless_current('My Clipped Coupons', user_clipped_coupons_path(current_user))%> :
+						<%= link_to('Logout', logout_path) %>
+					<% else -%>
+						<%=link_to('Signup', signup_path) %> :
+						<%=link_to('Login', login_path) %>
+					<% end -%>
+			  </div>
+			  <div class="right">
+			    &copy; 2009 <%= render_site_name %>, All Rights Reserved
+			  </div>
+		  </div>
+		</div>
+	  <div id="powered_by">
+	    <%= link_to 'Powered by Netphase', 'http://netphase.com' %>
+    </div>
+
+		<%= google_analytics(@current_domain.analytics_code) %>
+</body>
+</html>

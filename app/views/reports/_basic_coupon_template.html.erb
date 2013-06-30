@@ -1,0 +1,27 @@
+<% coupon_template ||= basic_coupon_template %>
+<% menu_id = "basic_item_menu_#{coupon_template.id}" %>
+  <tr onmouseover="$('<%=menu_id%>').style.visibility='visible'" 
+  	  onmouseout="$('<%=menu_id%>').style.visibility='hidden'" class="<%= cycle("odd", "even") -%> <%= render_coupon_template_class(coupon_template) %>" id="<%=dom_id(coupon_template)%>">
+  	<td>  <div id="<%=menu_id%>" class="item_menu">
+  		<%= link_to image_tag('bin.png', :title=>"Delete #{coupon_template.name}"), [coupon_template.account, coupon_template], 
+  				:confirm => "This will permanently delete all information for #{coupon_template.name} from our system. This cannot be undone. Are you sure you want to do this?", :method => :delete %>
+  	  <%= link_to image_tag('pencil.png', :title=>"Edit #{coupon_template.name}"), 
+  			    edit_account_coupon_template_path(coupon_template.account, coupon_template) %>
+	    <%= link_to image_tag('arrow_redo.png', :title=>"Renew #{coupon_template.name}"), 
+  					renew_account_coupon_template_path(coupon_template.account, coupon_template) %>
+  		<%= link_to image_tag('arrow_refresh.png', :title=>"Replace #{coupon_template.name}"), 
+  					replace_account_coupon_template_path(coupon_template.account, coupon_template) %>
+  	  </div>
+  	</td>
+  	<td>
+  	  <%= coupon_template.id %>
+  	</td>
+  	<td>
+  	  <%=link_to coupon_template.account.name, coupon_template.account %>
+    </td>
+    <td><%= link_to coupon_template.name, [coupon_template.account, coupon_template] %></td>
+    <td><%= render_offer(coupon_template.offer, coupon_template.offer_values) %></td>
+    <td><%= coupon_template.viewed %></td>
+    <td><%= coupon_template.printed %></td>
+    <td><%= coupon_template.clipped %></td>
+  </tr>

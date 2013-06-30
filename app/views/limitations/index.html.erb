@@ -1,0 +1,18 @@
+<% @title = "Current Limitations #{link_to image_tag('add.png'), new_limitation_path, :title => 'Add new limitation'}" %>
+
+<%= render :partial => "shared/admin_menu" %>
+
+<table class="data">
+  <tr>
+    <th class="actions_2">
+    <th>Name</th>
+  </tr>
+  <%= render :partial => @limitations %>
+</table>
+
+<br />
+
+<%= link_to 'New limitation', new_limitation_path %>
+
+<div class='clear_fix'></div>
+

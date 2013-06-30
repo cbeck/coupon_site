@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  ad_block_id: 1
+  ad_id: 1
+  position: 1
+
+two:
+  ad_block_id: 1
+  ad_id: 1
+  position: 1

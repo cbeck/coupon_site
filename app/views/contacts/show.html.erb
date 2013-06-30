@@ -1,0 +1,22 @@
+<% @title = "#{@contact.issue_status.name} Message" %>
+
+<p>
+  <b>From:</b>
+  <%=h @contact.name %> &lt;<%=mail_to @contact.email %>&gt;
+</p>
+
+<p>
+  <b>Subject:</b>
+  <%=h @contact.contact_issue.name %>
+</p>
+
+<p>
+  <b>Comments:</b><br/>
+<pre>
+<%=h @contact.comments %>
+</pre>
+</p>
+
+<div id="page_menu">
+	<%= link_to 'All contact messages', contacts_path %>
+</div>

@@ -1,0 +1,13 @@
+<% @title = "New Business Location" %>
+
+<%= nested_error_messages_for :business %>
+
+<% form_for([@account, @business], :html => { :multipart => true }) do |f| -%>
+	<%=render :partial => 'form', :object => f %>
+	<div class="clear"></div>
+	<div id="submit">
+	 	<%= f.submit "Create" %>
+	</div>
+<% end -%>
+
+<%= link_to "Cancel and go back to viewing this account", @account %>

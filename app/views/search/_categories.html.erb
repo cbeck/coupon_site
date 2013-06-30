@@ -1,0 +1,6 @@
+<% to = @to || "" %>
+<% SiteConfig['popular_categories'].to_a[0..3].each {|cat| %>
+  <li class="<%= 'active' if cat == to -%>">
+    <%= (cat == to) ? cat.titleize : link_to_remote(cat.titleize, :url => change_home_search_path(:to => cat), :method => :get)  %>
+  </li>
+<% } %>

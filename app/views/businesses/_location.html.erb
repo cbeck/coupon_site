@@ -1,0 +1,21 @@
+<% unless location.nil? -%>
+<div class="adr">
+	<% if !location.hidden? || (logged_in? && current_user.admin?) %>
+		<div class="street-address">
+			<%=location.address_line1 unless location.address_line1.blank? -%>
+			<%="<br/>#{location.address_line2}" unless location.address_line2.blank? -%>
+		</div>
+		<span class="locality"><%=location.city%></span>,
+		<span class="region"><%=location.state unless location.state.blank?%></span>
+		<span class="postal-code"><%=location.postal_code %></span>
+		<% unless location.country == "US" -%>
+			<div class="country-name"><%=location.country%></div>
+		<% end -%>
+		<% if location.hidden? && logged_in? && current_user.admin? -%>
+			<div style="margin: 0.5em 0 1em;">
+				<small><em>* This address only visible to admins</em></small>
+			</div>
+		<% end -%>
+	<% end -%>
+</div>
+<% end -%>

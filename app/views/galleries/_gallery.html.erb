@@ -1,0 +1,17 @@
+<% menu_id = "item_menu_#{gallery.id}" %>
+<tr onmouseover="$('<%=menu_id%>').style.visibility='visible'" 
+	  onmouseout="$('<%=menu_id%>').style.visibility='hidden'" class="<%= cycle("odd", "even") -%>" id="<%=dom_id(gallery)%>">
+	<td>  <div id="<%=menu_id%>" class="item_menu">
+		<%= link_to image_tag('bin.png', :title=>"Delete #{gallery.name}"), gallery, 
+				:confirm => "This will permanently delete this gallery from our system. This cannot be undone. Are you sure you want to do this?", :method => :delete %>
+	  <%= link_to image_tag('pencil.png', :title=>"Edit #{gallery.name}"), 
+					edit_gallery_path(gallery) %>
+	  </div>
+	</td>
+<td>
+  <%=link_to h(gallery.name), gallery %>			
+</td>
+<td><%= gallery.description %></td>
+<td class="center"><%= render_boolean_image gallery.has_logos %></td>
+<td class="center"><%= render_boolean_image gallery.enabled %></td>
+</tr>

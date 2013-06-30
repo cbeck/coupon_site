@@ -1,0 +1,7 @@
+<% content_for :page_css do %>  
+  <style>
+	  div.coupon.large {
+      background: #fff url("<%= small_medium_path(Gallery.current_logo, :format => :jpg) unless Gallery.current_logo.blank? %>") no-repeat bottom right;
+    }
+	</style>
+<% end  %>

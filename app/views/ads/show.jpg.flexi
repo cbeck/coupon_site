@@ -1,0 +1,3 @@
+@ad.operate do |ad|
+  #image.resize '320x240'
+end

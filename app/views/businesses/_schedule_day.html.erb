@@ -1,0 +1,24 @@
+<div class="schedule_day <%= cycle('odd', 'even')%>">
+		<% fields_for "business[data][schedule]", schedule do |s| -%>
+			<% day = schedule_day.downcase %>
+			<%=s.label "#{schedule_day[0..2]}:" %>
+			<% closed = true if schedule.send "#{day}_closed" %>
+			<div class="hours" id="<%="#{day}_hours"%>"
+					style="<%='display:none' if closed %>">
+					<%=s.text_field "#{day}_open", :size => 5 %>
+					<%=s.select "#{day}_open_period", %w[AM PM] %> &ndash;
+					<%=s.text_field "#{day}_close", :size => 5%>
+					<%=s.select "#{day}_close_period", %w[AM PM] %>
+			</div>
+			<div class="closed">
+			  Closed 
+				<%=s.check_box "#{day}_closed", 
+					:onclick => "$('#{day}_closed').toggle(); $('#{day}_hours').toggle();" %>  
+			</div>
+			<div class="day_closed" id="<%="#{day}_closed"%>" 
+				style="<%='display:none' unless closed %>">
+				Closed
+			</div>			
+		<% end -%>
+</div>
+

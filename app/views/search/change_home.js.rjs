@@ -1,0 +1,1 @@
+page[:home_tab_container].replace_html :partial => @partial

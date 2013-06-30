@@ -1,0 +1,11 @@
+@ad.operate do |ad|
+	# image.resize '320x240', :crop => true
+	# image.image_overlay 'public/images/logo.png',
+	#   :alignment => :bottom_right,
+	#   :offset => '20x20'
+	# image.border :size => 10, :color => 'green'
+	# image.text 'I like Cheese'
+	# image.unsharp_mask
+	# image.shadow
+  
+end

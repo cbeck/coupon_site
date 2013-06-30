@@ -1,0 +1,21 @@
+<% @title = "Edit #{@affiliate_group.name}" %>
+
+<% form_for(@affiliate_group) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+
+<%= link_to 'Cancel editing and view this affiliate group', @affiliate_group %> |
+<%= link_to 'Cancel editing and go back to affiliate group list', affiliate_groups_path %>

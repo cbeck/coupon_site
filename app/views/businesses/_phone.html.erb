@@ -1,0 +1,12 @@
+<% fields_for "business[data][phone][]", phone do |f| -%>
+		<div class="point_of_contact" id="<%=dom_id(phone)%>">
+			<%# @phone = phone %>
+			<%#= error_messages_for :phone, :object => phone %>
+			<label><%=(phone.main) ? "Main:" : "Phone:" -%></label>		
+			<%= f.text_field :formatted_number, :size => 15, :index => nil %>
+			<%= f.select("phone_type", Phone.types.collect {|t| [t, t] }, {}, :index => nil ) %>
+			<%= f.hidden_field("main", :index => nil) if phone.main %>
+			<%= remove_item_link('phone', phone, 'remove_phone', "#{dom_id(phone)}") unless phone.main %>
+			<%= existing_field_id(f, phone) %> 
+		</div>
+<% end -%>

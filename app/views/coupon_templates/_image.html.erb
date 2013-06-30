@@ -1,0 +1,3 @@
+<li id="<%= dom_id(image)%>" class="thumbs">
+  <%= link_to_function thumb_link(image), "Images.select('#{image.id}', '#{dom_id(image)}')" %>
+</li>

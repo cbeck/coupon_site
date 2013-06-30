@@ -1,0 +1,127 @@
+<div style="float: left; width: 400px;">
+	<div class="admin_form">
+	  <h2>General Information</h2>
+	  <div class="form">
+	  	<label for="name">Business Name</label><br/>
+		  <%= form.text_field :name %><br/>
+	  
+		  <% if @account.primary_business? %>
+		    <%= form.label :primary %> <%= form.check_box :primary %> <br/>
+		  <% else %>
+		    <%= hidden_field_tag 'business[primary]', true %>
+		  <% end %>
+	 
+
+	  <% form.fields_for :data do |data| -%>
+	  	<%=render :partial => 'location_form', :object => data, 
+	  			:locals => { :location => @business.location }%>
+	  <% end -%>
+  
+	  </div>
+  
+	  <h4>Phone Numbers <%=add_item_link :phones, 'phone', Phone.new, 'phone' %></h4>
+		<div id="phones">
+		  <%= render :partial => 'phone', :collection => @business.phones %>
+		</div>
+		
+		
+	</div>
+	
+	<div class="admin_form">
+	  <h2>Hours of Operation</h2>
+		<% fields_for "business[data][schedule]", @business.schedule do |f| -%>
+			<p class="omit_schedule"><%=f.check_box 'omit', :onclick => "$('schedule').toggle();", :id=>"omit" %> I prefer to omit my operating hours</p>
+			<div id="schedule" <%="style='display: none'" if !@business.schedule? %>>
+				<p class="all_hours"><%=f.check_box 'all_hours', :onclick => "$('schedule_hours').toggle();" %> This business is open 24x7</p>
+				<div id="schedule_hours">
+				<%=render :partial => '/businesses/schedule_day', 
+					:collection => %w[monday tuesday wednesday thursday friday saturday sunday],
+					:locals => { :schedule => @business.schedule } %>
+				</div>
+			</div>
+		<% end -%>
+	</div>
+</div>
+
+<div style="margin-left: 420px">
+	<div class="admin_form">
+	  <h2>Description</h2> 
+	  <div class="form"> 
+	    <%= form.text_area :description, :rows => 5, :cols => 50 %>
+		</div>
+	</div>
+
+	<div class="admin_form">
+		<h2>Keywords <%=add_item_link :tags, 'tag', Tag.new, 'tag' %></h2>
+		<div id="tags">
+			<p><em>Account keywords: <%=@business.account.tags.join(', ') unless @business.account.blank? || @business.account.tags.blank? %></em></p>
+			<%= render :partial => 'tag', :collection => @business.tags %>
+		</div>
+	</div>
+
+	<div class="admin_form">
+	  <h2>Points of Contact</h2>
+	  <div class="form">
+			<h4>People <%=add_item_link :people, 'person', Person.new, 'person' %></h4>
+			<div id="people">
+				<%= render :partial => 'person', :collection => @business.people %>
+			</div>
+
+			<h4>Email Addresses <%=add_item_link :emails, 'email', EmailAddress.new, 'email' %></h4>
+			<% if @business.email_addresses.blank? && !@business.emails.blank? %>
+			<div id="primary_emails" class="form_help">
+			  <p>This location is using the following email addresses (obtained from the primary location):</p>
+			  <ul>
+			  <% @business.emails.each {|email| %>
+			    <li><%= email.to_s %></li>
+			  <% } %>
+			  </ul>
+			  <p>You can over-ride the current email settings by clicking 'add email' above.</p>
+			</div>
+			<% end %>
+			<div id="emails">
+				<%= render :partial => 'email', :collection => @business.email_addresses %>
+			</div>
+	
+			<h4>Websites <%=add_item_link :websites, 'website', Website.new, 'website' %></h4>
+			<% if @business.websites.blank? && !@business.urls.blank? %>
+			<div id="primary_websites" class="form_help">
+			  <p>This location is using the following websites (obtained from the primary location):</p>
+			  <ul>
+			  <% @business.urls.each {|url| %>
+			    <li><%= url.to_s %></li>
+			  <% } %>
+			  </ul>
+			  <p>You can over-ride the current website settings by clicking 'add website' above.</p>
+			</div>
+			<% end %>
+			<div id="websites">
+				<%= render :partial => 'website', :collection => @business.websites %>
+			</div>
+	  </div>
+	</div>
+	<br/>
+
+	<div class="admin_form" id="media">
+	  <h2>Media</h2> 
+	  <%= form.check_box :override_logo %> <%= form.label :override_logo, "Over-ride Corporate Logo (use special logo for this location only)"%>
+		<div class="form">
+			<h4>Images <%=add_item_link :images, 'image', Image.new, 'image' %></h4>
+			<p>You can re-order your images by dragging them up and down in the list.  
+				 Your logo should be first if the "Over-ride Corporate Logo" option is selected above.  The order will be automatically saved.</p>
+			<ul id="images">
+				<% @business.images.each do |image| %>
+				<li id="image_<%=image.id%>">
+					<%= render :partial => 'image', :object => image %>
+				</li>
+				<% end -%>
+			</ul>			
+		</div>
+	</div>
+</div>
+
+<%= sortable_element 'images',
+:url => { :action => "sort_images" , :id => @business.id },
+:complete => visual_effect(:highlight, 'images') unless @business.new_record?
+%>
+

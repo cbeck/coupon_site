@@ -1,0 +1,67 @@
+<% @title = "#{@coupon_template.name} for #{@coupon_template.account.name} #{link_to image_tag('pencil.png'), edit_account_coupon_template_path(@account, @coupon_template)}" %>
+
+<div class="admin_form">
+  <h2>Basic Coupon Info</h2>
+  <p class="special_instructions">
+    This coupon <%= (@coupon_template.enabled?) ? "IS" : "IS NOT" -%> currently visible to users on the site.
+  </p>
+  <p>
+    <b>Offer:</b>
+    <%= render_offer(@coupon_template.offer, @coupon_template.offer_values) %>
+  </p>
+  <p>
+    <b>Start on:</b>
+    <%=h @coupon_template.start_on %>
+  </p>
+  <p>
+    <b>Expired on:</b>
+    <%=h @coupon_template.expired_on %>
+  </p>
+  <p>
+    <b>Limitations:</b>
+    <%= @coupon_template.limit %>
+  </p>
+</div>
+
+<div class="admin_form">
+  <h2>Display on Coupon</h2>
+  <p class="special_instructions">
+    This coupon will display the info associated with <%= (@coupon_template.use_primary) ? "the PRIMARY" : "its OWN" %> location (where applicable) for the following:    
+  </p>
+  
+  <% if @coupon_template.has_display_data? %>
+    <ul>
+      <%= "<li>Location</li>" if @coupon_template.show_location%>
+      <%= "<li>Email</li>" if @coupon_template.show_email%>
+      <%= "<li>Website</li>" if @coupon_template.show_website%>
+      <%= "<li>Phone</li>" if @coupon_template.show_phone%>
+    </ul>
+  <% else %>
+    <p>There is no additional location data to be displayed on the coupon.</p>
+  <% end %>
+
+</div>
+
+<div class="admin_form">
+  <h2>Coupon Image</h2>
+  <p>
+    <%=small_link @coupon_template.image unless @coupon_template.image.blank? %>
+  </p>
+</div>
+
+<div class="admin_form">
+  <p><b>Info Boxes to Print on Coupon:</b>
+  <% if @coupon_template.info_boxes.empty? %>
+    None
+  <% else %>
+    <%= @coupon_template.info_boxes.collect{|ib| ib.name}.to_sentence %>
+  <% end %>
+  </p>
+</div>
+
+
+
+<%= link_to 'Edit this coupon', edit_account_coupon_template_path(@account, @coupon_template) %> |
+<%= link_to 'Create a new coupon', new_account_coupon_template_path(@account) %> |
+<%= link_to 'All coupons for this account', account_coupon_templates_path(@account) %> |
+<%= link_to 'View this account', account_path(@account) %>

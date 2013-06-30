@@ -1,0 +1,47 @@
+<div id="edit_user_info">
+	<h1>Edit user</h1>
+	<%= nested_error_messages_for :user %>
+	<% form_for([:admin, @user]) do |f| -%>
+		<p><%= label_tag 'email' %><br/>
+		<%= f.text_field :email, :size => 30 %></p>
+		
+			<p><%= f.check_box :admin %> Admin User</p>
+
+  		<% if current_user.sysadmin? %>
+  		  <p>
+           <%= f.label :affiliate_group_id, "Make administrator of" %><br/>
+           <%= f.collection_select :affiliate_group_id, AffiliateGroup.all, :id, :name %>
+         </p>
+
+  	    <p><%= f.check_box :sysadmin %> Super User
+  	      <em><strong>*Grant with caution! Super users can view all accounts, users, and data and can modify the system in potentially destructive ways!</strong></em>
+  	    </p>	    
+  	  <% end %>
+
+		<%= link_to_function('change password', "$('change_password').show(); this.hide();") %>
+		<div id="change_password" style="display: none">
+			<p><%= label_tag 'password' %><br/>
+			<%= f.password_field :password %></p>
+
+			<p><%= label_tag 'password_confirmation', 'Confirm Password' %><br/>
+			<%= f.password_field :password_confirmation %></p>
+		</div>
+
+		<div id="optional">
+			<h3>Location</h3>
+			<% f.fields_for :data do |data| -%>
+				<%=render :partial => '/businesses/location_form', :object => data, 
+						:locals => { :location => @user.location }%>
+			<% end -%>
+
+			<h3>Extra email addresses</h3>
+			<p><%= label_tag 'email2' %><br/>
+			<%= f.text_field :email2 %></p>		
+
+			<p><%= label_tag 'email3' %><br/>
+			<%= f.text_field :email3 %></p>		
+		</div>
+
+		<p><%= submit_tag 'Update' %> | <%= link_to "Cancel and go back to user list", admin_users_path %></p>
+	<% end -%>
+</div>

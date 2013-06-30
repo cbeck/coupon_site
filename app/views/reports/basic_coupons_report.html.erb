@@ -1,0 +1,18 @@
+<% @title = "Basic Coupons Report" %>
+
+<a name="expired"/>
+<table class="data">
+  <tr>
+  <th class="actions_4">Action</th>
+  <th><%= render_sort_link("coupons", "id", @coupons_sort) %></th>
+  <th><%= render_sort_link("coupons", "business_name", @coupons_sort) %></th>
+  <th>Coupon</th>
+  <th>Offer</th>
+  <th><%= render_sort_link("coupons", "viewed", @coupons_sort) %></th>
+  <th><%= render_sort_link("coupons", "printed", @coupons_sort) %></th>
+  <th><%= render_sort_link("coupons", "clipped", @coupons_sort) %></th>
+  </tr>
+  <%= render :partial => "basic_coupon_template", :collection =>  @coupons %>
+</table>
+
+<p class="margin_top_10"><%= link_to "Go back to all reports", reports_path %></p>

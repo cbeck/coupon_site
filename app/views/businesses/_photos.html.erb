@@ -1,0 +1,10 @@
+<% unless business.photos.blank?  -%>
+<div class="info_block">
+<h5>Photos</h5>
+<% for photo in business.photos -%>
+	<% if has_attachment? photo -%>
+		<%= medium_link(photo, :class => "listing_thumbs photo")%>
+	<% end -%>
+<% end -%>
+</div>
+<% end -%>

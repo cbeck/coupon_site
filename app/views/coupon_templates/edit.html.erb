@@ -1,0 +1,25 @@
+<% @title = "Edit #{@coupon_template.name} for #{@account.name}" %>
+
+<% form_for([@account, @coupon_template]) do |f| %>
+  <%= f.error_messages %>
+
+  <%= render :partial => "form", :object => f %>
+  
+  <div class="admin_form">
+  <h2 class="clear_fix">This Coupon Assigned To The Following Locations</h2> 
+  <ul>
+  <% @account.businesses.each do |business| %>
+    <li>
+      <%= check_box_tag("business_ids[]", business.id, @coupon_template.businesses.include?(business)) %>
+      <%= business.name %> 
+    </li>
+  <% end %>
+  </ul>
+  </div>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Cancel editing this coupon and view it instead', [@account, @coupon_template ]%> |
+<%= link_to 'Cancel editing and go back to coupon list', account_coupon_templates_path(@account) %>

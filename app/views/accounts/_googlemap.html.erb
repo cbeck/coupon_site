@@ -1,0 +1,69 @@
+<% @home = @account.primary_business.location %>
+<% if google_maps?(@account.primary_business.location) %>
+	<% content_for("page_scripts") do -%>
+		<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=<%= @current_domain.google_key -%>"
+		      type="text/javascript"></script>
+		<script src="/javascripts/mapiconmaker_packed.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			//<![CDATA[
+
+			function addIcon(map, point, letter, color, html) {
+				var marker =  new GMarker(point,
+			    // new GLatLng(latitude, longitude),
+			    { icon: MapIconMaker.createLabeledMarkerIcon({addStar: false, 
+						label: letter, primaryColor: color}) }
+				)
+				
+			  GEvent.addListener(marker, "click", function() {	// also mouseover
+					marker.openInfoWindowHtml(html);
+				});
+			 	map.addOverlay(marker);
+			}
+
+			function load() {
+			  if (GBrowserIsCompatible()) {
+					var center = new GLatLng(<%=@home.latitude%>, <%=@home.longitude%>);
+			    var map = new GMap2(document.getElementById("map"));					
+			    //map.addControl(new GMapTypeControl());
+					map.addControl(new GSmallZoomControl());
+
+					var bounds = new GLatLngBounds();
+					<% 
+						@account.businesses.group_by(&:id).each_with_index do |arr, index|
+							account, businesses = arr
+							businesses.each do |b|
+								unless b.location.hidden?
+						 %>
+									addBusiness(map, bounds, <%=b.location.latitude%>, <%=b.location.longitude%>,
+										"<b><%=b.name%></b><br/>" + '<%=b.location.to_html%>', <%=index%>)
+						<% 
+								else
+									loc = b.location.city_geocode
+						 %>
+									addBusiness(map, bounds, <%=loc[:lat]%>, <%=loc[:lng]%>,
+										"<b><%=b.name%></b><br/>" + '<%=loc[:full_address]%>', <%=index%>)
+						<% 
+								end
+							end
+						end
+					-%>
+					var maxZoom = <%=SiteConfig[:initial_map_zoom] || 10%>;
+					var zoom = map.getBoundsZoomLevel(bounds);
+					zoom = (zoom >= maxZoom) ? maxZoom : zoom;
+					map.setCenter(bounds.getCenter(), zoom);
+			}
+
+			function addBusiness(map, bounds, lat, lng, html, index) {
+						var point = new GLatLng(lat, lng);
+						var letter = String.fromCharCode("A".charCodeAt(0) + index);
+						addIcon(map, point, letter, "#ffff00", html);
+						bounds.extend(point);
+			  }
+			}
+			//]]>
+		</script>
+	<% end -%>
+	<% content_for("body_events") do -%>
+	 	onload="load()" onunload="GUnload()"
+	<% end -%>
+<% end -%>

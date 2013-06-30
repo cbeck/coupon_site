@@ -1,0 +1,23 @@
+<%#= render :partial => "shared/large_coupon_css"%>
+
+<h4 class="regular hide">Print Clipped Coupons</h4>
+
+<div id="details_container">
+  <div id="print_details">
+    <p class="hide">You have selected <%= @coupons.length %> coupons for printing. <%= link_to_function "Print Now", "window.print()" %> or <%= link_to "return to My Clipped Coupons", user_clipped_coupons_path(current_user) %>.</p>
+    <p class="print_only center"><%= media_link Gallery.current_logo unless Gallery.current_logo.blank? %></p>
+  </div>
+  <div id="mini_coupons_container">  
+    <div id="mini_coupons_top">
+      <% num = (@coupons.size / 3.0).ceil %>
+      <% i = 1 %>
+      <% @coupons.in_groups_of(3, false) do |coupon_slice| %>
+        <div class="large_coupon_group <%= 'last' if i == num %>">
+           <%= render :partial => "coupon", :collection => coupon_slice, :locals => {:hide_name => true} %> 
+        </div>
+        <% i += 1%>
+      <% end %>   
+    </div>
+  </div>
+  <div class="clear_fix">&nbsp;</div>
+</div>

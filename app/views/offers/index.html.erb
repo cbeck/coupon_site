@@ -1,0 +1,16 @@
+<% @title = "Current Offers #{link_to image_tag('add.png'), new_offer_path, :title => 'Add new offer'}" %>
+
+<%= render :partial => "shared/admin_menu" %>
+
+<table class="data">
+  <tr>
+    <th class="actions_2">
+    <th>Name</th>
+  </tr>
+  <%= render :partial => @offers %>
+</table>
+
+<br />
+
+<%= link_to 'New offer', new_offer_path %>
+<div class="clear_fix"></div>

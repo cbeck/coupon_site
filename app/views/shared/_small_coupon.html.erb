@@ -1,0 +1,27 @@
+<% cycle_2 ||= false %>
+<% unless small_coupon.blank? %>
+  <% coupon_template = small_coupon.coupon_template %>
+  <% account ||= @account %>
+  <% cycle_class = (cycle_2) ? cycle('first', 'second') : cycle('first', 'second', 'third', 'fourth') %>
+  <% show_locations ||= false %>
+  <li>
+    <div class="coupon_container small <%= cycle_class %>">
+      <% path = render_coupon_path(small_coupon)%>
+      <div class="coupon coupon_click_area mini_coupon_item" onclick="<%= path -%>;">
+          <%= render :partial => "coupons/coupon_item", :object => small_coupon %>
+      </div> 
+      <div class="mini_coupon_buttons">   
+        <%= render :partial => "shared/coupon_buttons", :locals => {:coupon => small_coupon}%>
+        <div class="clear_fix dot">&nbsp;</div>
+        <% if show_locations %>        
+          <p class="coupon_available_locations" onclick="javascript:$('<%=dom_id(coupon_template)%>_businesses').toggle();">View Available Locations</p>
+          <div id="<%= dom_id(coupon_template) -%>_businesses" style="display:none;">
+             <table class="available_locations">
+                <%= render :partial => "accounts/business", :collection => coupon_template.businesses, :locals => {:coupon_template => coupon_template, :account => account} %>
+             </table>
+          </div>            
+        <% end %>
+      </div>    
+    </div>    
+  </li>
+<% end %>

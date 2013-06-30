@@ -1,0 +1,17 @@
+<% fields_for "business[data][image][]", image do |f| -%>
+	<div>
+		<% unless image.new_record? -%>
+			<%= small_link(image)%>
+			<%= remove_item_link('image', image, 'remove_image') %>
+		<% else -%>
+			<h6>New Image</h6>
+			<%= remove_item_link('image', image, 'remove_image') %>
+			<p>
+      Upload: <%= f.file_field :image_file %><br/>
+      <strong>or</strong> URL to the image: <%= f.text_field :image_file_url %>
+			<%= existing_field_id(f, image) %>
+			
+			</p>
+		<% end -%>
+	</div>
+<% end -%>

@@ -1,0 +1,27 @@
+<% @title = "Site Configuration" %>
+
+<%= render :partial => "shared/admin_menu" %>
+<table class="data">
+  <tr>
+    <th align="left">Name</th>
+    <th align="center" width="80">Value</th>
+    <th align="left">Description</th>
+  </tr>
+  <% for site_config in @site_configs %>
+    <tr class="<%= cycle("odd", "even") -%>">
+      <td width="200"><%= link_to h(site_config.name.humanize), 
+					edit_site_config_path(site_config) %></td>
+      <td align="center">
+				<% if site_config.value.size > 8 %>
+					<%=link_to 'show', edit_site_config_path(site_config)%>
+				<% else -%>
+					<%=h site_config.value %>
+				<% end -%>
+			</td>
+      <td><%=h site_config.description %></td>
+    </tr>
+  <% end %>
+</table>
+
+
+

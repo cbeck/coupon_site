@@ -1,0 +1,28 @@
+<h1>Listing ad_blocks</h1>
+
+<table>
+  <tr>
+    <th>Location</th>
+    <th>Available placements</th>
+    <th>Orientation</th>
+    <th>Columns</th>
+    <th>Stylesheet</th>
+  </tr>
+
+<% @ad_blocks.each do |ad_block| %>
+  <tr>
+    <td><%=h ad_block.location %></td>
+    <td><%=h ad_block.available_placements %></td>
+    <td><%=h ad_block.orientation %></td>
+    <td><%=h ad_block.columns %></td>
+    <td><%=h ad_block.stylesheet %></td>
+    <td><%= link_to 'Show', ad_block %></td>
+    <td><%= link_to 'Edit', edit_ad_block_path(ad_block) %></td>
+    <td><%= link_to 'Destroy', ad_block, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New ad_block', new_ad_block_path %>

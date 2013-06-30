@@ -1,0 +1,19 @@
+<% @title = "Image Galleries #{link_to image_tag('add.png'), new_gallery_path, :title => 'Add new Image Gallery'}" %>
+
+<%= render :partial => "shared/admin_menu"%>
+
+<p>Image Galleries are available to all businesses to use as clip art on their coupons. Multiple galleries may be created for organizing the images.</p>
+<table id="items" class="data">
+	<tr>
+	  <th class="actions_2"></th>
+		<th>Name</th>
+		<th>Description</th>
+		<th>Used for Logos</th>
+		<th>Enabled</th>
+	</tr>
+	<%= render :partial => @galleries %>
+</table>
+
+<br />
+
+<%= link_to 'New gallery', new_gallery_path %>

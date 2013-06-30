@@ -1,0 +1,3 @@
+<tr class="<%= cycle('odd','even')%>" id="<%= dom_id(contact)-%>">
+  <%= render :partial => "contact_inner", :locals => {:contact => contact}%>
+</tr>

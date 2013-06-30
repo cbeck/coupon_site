@@ -1,0 +1,12 @@
+<% account ||= @account -%>
+<% unless business.nil? -%>
+<tr class="coupon_action_row odd">
+  <td colspan="3" class="coupon_action pad">
+    <%= link_to business.location.address_line1, details_account_business_path(account, business) %>
+  </td>
+</tr>
+<tr class="coupon_action_row even">
+  <%= render :partial => "shared/coupon_buttons", :locals => {:coupon => coupon_template.coupon_for_business(business), :as_columns => true }%>
+</tr>
+<% end -%>
+

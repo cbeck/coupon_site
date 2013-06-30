@@ -1,0 +1,20 @@
+<p>
+  <%= form.label :name %><br />
+  <%= form.text_field :name %>
+</p>
+<p>
+  <%= form.label :url %><br />
+  <%= form.text_field :url %>
+</p>
+<p>
+  <%= form.label :theme_id %><br />
+  <%= form.text_field :theme_name %>
+</p>
+<p>
+  <%= form.label :affiliate_group_id %><br />
+  <%= form.collection_select :affiliate_group_id, AffiliateGroup.all, :id, :name, {:prompt => true} %>
+</p>
+<p>
+  <%= form.label :google_map_key %><br />
+  <%= form.text_field :google_map_key %>
+</p>

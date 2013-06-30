@@ -1,0 +1,15 @@
+<% @title = "Edit Gallery Info"%>
+
+<% form_for(@gallery) do |f| %>
+  <%= f.error_messages %>
+  
+ 
+  <%= render :partial => "form", :object => f %>
+  
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Cancel editing and view this gallery', @gallery %> |
+<%= link_to 'Go back to gallery list', galleries_path %>

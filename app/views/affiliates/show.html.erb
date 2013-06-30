@@ -1,0 +1,25 @@
+<% @title = @affiliate.name %>
+
+<div class="admin_form margin_top_10">
+  <h2>Basic Affiliate Info</h2>
+<p><b>ID:</b>
+<%= @affiliate.id %>
+
+<p>
+  <b>Description:</b>
+  <%=h @affiliate.description %>
+</p>
+
+<p>
+  <b>Internal identifier:</b>
+  <%=h @affiliate.internal_identifier %>
+</p>
+
+<p>
+  <b>Billable:</b>
+  <%= (@affiliate.billable) ? "Yes" : "No" %>
+</p>
+</div>
+<%= link_to 'Edit this affiliate', edit_affiliate_path(@affiliate) %> |
+<%= link_to 'View all affiliates', affiliates_path %> | 
+<%= link_to 'Place this affiliate into an Affiliate Group', new_affiliate_group_membership_path(:affiliate_id => @affiliate.id)%>

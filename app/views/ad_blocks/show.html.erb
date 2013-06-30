@@ -1,0 +1,28 @@
+<p>
+  <b>Location:</b>
+  <%=h @ad_block.location %>
+</p>
+
+<p>
+  <b>Available placements:</b>
+  <%=h @ad_block.available_placements %>
+</p>
+
+<p>
+  <b>Orientation:</b>
+  <%=h @ad_block.orientation %>
+</p>
+
+<p>
+  <b>Columns:</b>
+  <%=h @ad_block.columns %>
+</p>
+
+<p>
+  <b>Stylesheet:</b>
+  <%=h @ad_block.stylesheet %>
+</p>
+
+
+<%= link_to 'Edit', edit_ad_block_path(@ad_block) %> |
+<%= link_to 'Back', ad_blocks_path %>

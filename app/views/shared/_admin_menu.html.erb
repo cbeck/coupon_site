@@ -1,0 +1,19 @@
+<% style ||= "" %>
+<div id="admin_menu" class="<%= style %>">
+  <h4>Admin Menu</h4>
+  <ul>
+    <li><%= link_to "Manage Business Accounts", accounts_path %></li>
+    <li><%= link_to "Manage Offers", offers_path %></li>
+    <li><%= link_to "Manage Limitations", limitations_path %></li>
+    <li><%= link_to "Manage Users", admin_users_path %></li>
+    <li><%= link_to "Manage Image Gallery", galleries_path %></li>
+  	<li><%= link_to "Contact Us Messages", contacts_path %></li>    
+    <li><%= link_to "Reports", reports_path %></li>
+    <li><%= link_to "Manage Ads", ads_path %></li>
+    <% if current_user.sysadmin? %>
+      <li><%= link_to "Manage Affiliates", affiliates_path %></li>    
+      <li><%= link_to "Manage Domains", domains_path %></li>
+      <li><%= link_to "Site Configuration", site_configs_path %></li>
+    <% end %>
+  </ul>
+</div>

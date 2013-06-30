@@ -1,0 +1,408 @@
+[Sun Mar  8 14:51:06.077 2009] 0.029 sec [all/2/rel 0 (0,20)] [*] pizza
+[Sun Mar  8 14:51:12.368 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] starbuck
+[Sun Mar  8 14:51:26.345 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] coupon
+[Sun Mar  8 14:53:30.411 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] pizza
+[Sun Mar  8 14:53:51.030 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] anzi
+[Sun Mar  8 14:53:59.694 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] pasta
+[Sun Mar  8 14:54:55.383 2009] 0.033 sec [all/2/rel 4 (0,20)] [*] pizza
+[Sun Mar  8 14:56:11.893 2009] 0.001 sec [all/2/rel 0 (0,20)] [*] demo_admin@netphase.com
+[Sun Mar  8 15:00:17.669 2009] 0.000 sec [all/2/rel 4 (0,20)] [*] pizza
+[Sun Mar  8 15:15:12.341 2009] 0.001 sec [all/2/rel 1 (0,20)] [*] anzi
+[Sun Mar  8 15:18:18.542 2009] 0.000 sec [all/2/rel 1 (0,20)] [*] pasta
+[Sun Mar  8 15:41:23.295 2009] 0.000 sec [all/2/rel 1 (0,20)] [*] anzi
+[Sun Mar  8 15:41:32.619 2009] 0.022 sec [all/2/rel 1 (0,20)] [*] anzi
+[Sun Mar  8 16:38:37.386 2009] 0.017 sec [all/2/rel 4 (0,20)] [*] pizza
+[Sun Mar  8 16:41:31.440 2009] 0.000 sec [all/2/rel 4 (0,20)] [*] pizza
+[Sun Mar  8 17:03:44.459 2009] 0.000 sec [all/2/rel 4 (0,20)] [*] pizza
+[Sun Mar  8 17:03:55.189 2009] 0.005 sec [all/2/rel 1 (0,20)] [*] pasta
+[Sun Mar  8 17:03:56.380 2009] 0.000 sec [all/2/rel 1 (0,20)] [*] pasta
+[Sun Mar  8 17:04:12.634 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] food
+[Sun Mar  8 17:04:46.633 2009] 0.000 sec [all/2/rel 4 (0,20)] [*] pizza
+[Sun Mar  8 17:04:56.779 2009] 0.000 sec [all/2/rel 3 (0,20)] [*] auto
+[Sun Mar  8 17:07:02.370 2009] 0.000 sec [all/2/rel 4 (0,20)] [*] pizza
+[Mon Mar  9 00:03:09.617 2009] 0.000 sec [all/2/rel 4 (0,20)] [*] pizza
+[Mon Mar  9 02:49:05.978 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Mar 10 15:34:52.121 2009] 0.059 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Mar 10 17:02:45.960 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Mar 10 22:38:40.743 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Mar 10 22:40:44.860 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Mar 10 22:52:36.100 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Mar 10 22:53:48.020 2009] 0.000 sec [all/2/rel 4 (0,20)] [*] pasta
+[Tue Mar 10 22:54:39.187 2009] 0.000 sec [all/2/rel 7 (0,20)] [*] auto
+[Tue Mar 10 22:56:49.751 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Mar 10 22:58:05.995 2009] 0.000 sec [all/2/rel 7 (0,20)] [*] auto
+[Tue Mar 10 23:06:50.939 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Mar 10 23:24:32.148 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Mar 10 23:28:27.936 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Mar 10 23:32:35.048 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Mar 10 23:34:23.103 2009] 0.000 sec [all/2/rel 7 (0,20)] [*] auto
+[Tue Mar 10 23:38:46.721 2009] 0.000 sec [all/2/rel 7 (0,20)] [*] auto
+[Tue Mar 10 23:40:48.438 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Mar 10 23:45:09.039 2009] 0.000 sec [all/2/rel 4 (0,20)] [*] pasta
+[Wed Mar 11 00:04:19.656 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Wed Mar 11 00:06:01.486 2009] 0.000 sec [all/2/rel 4 (0,20)] [*] pasta
+[Wed Mar 11 00:34:13.138 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Wed Mar 11 01:02:35.204 2009] 0.000 sec [all/2/rel 7 (0,20)] [*] auto
+[Wed Mar 11 01:47:39.344 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Wed Mar 11 01:56:17.483 2009] 0.000 sec [all/2/rel 7 (0,20)] [*] auto
+[Wed Mar 11 01:57:02.286 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Wed Mar 11 01:57:12.490 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Wed Mar 11 01:58:43.611 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] pizzq
+[Wed Mar 11 01:58:47.177 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Thu Mar 12 20:19:10.437 2009] 0.064 sec [all/2/rel 12 (0,20)] [*] pizza
+[Thu Mar 12 20:28:59.103 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Mar 13 10:40:38.492 2009] 0.000 sec [all/2/rel 4 (0,20)] [*] pasta
+[Fri Mar 13 11:20:47.502 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Mar 13 11:20:59.653 2009] 0.000 sec [all/2/rel 4 (0,20)] [*] pasta
+[Fri Mar 13 11:21:16.899 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Mar 13 11:21:31.446 2009] 0.000 sec [all/2/rel 4 (0,20)] [*] pasta
+[Tue Mar 24 15:02:02.283 2009] 0.003 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Mar 24 15:03:07.857 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Mar 24 17:56:38.690 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Mar 24 17:56:54.129 2009] 0.000 sec [all/2/rel 2 (0,20)] [*] breakfast
+[Tue Mar 24 17:58:23.155 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Mar 24 18:05:15.572 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Wed Mar 25 12:41:20.174 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Wed Mar 25 12:41:52.472 2009] 0.000 sec [all/2/rel 6 (0,20)] [*] 3
+[Fri Mar 27 14:41:17.176 2009] 0.071 sec [all/2/rel 11 (0,20)] [*] 2
+[Fri Mar 27 14:50:35.186 2009] 0.000 sec [all/2/rel 6 (0,20)] [*] 3
+[Fri Mar 27 14:56:18.913 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] Pizza%20Hut
+[Fri Mar 27 14:56:44.721 2009] 0.000 sec [all/2/rel 4 (0,20)] [*] Pizza Hut
+[Fri Mar 27 14:57:05.738 2009] 0.000 sec [all/2/rel 2 (0,20)] [*] Papa Johns
+[Fri Mar 27 14:57:16.437 2009] 0.000 sec [all/2/rel 2 (0,20)] [*] Bertucci
+[Fri Mar 27 14:57:29.579 2009] 0.000 sec [all/2/rel 2 (0,20)] [*] Papa Johns
+[Fri Mar 27 14:58:30.777 2009] 0.000 sec [all/2/rel 4 (0,20)] [*] Pizza Hut
+[Fri Mar 27 14:59:00.147 2009] 0.000 sec [all/2/rel 4 (0,20)] [*] Pizza Hut
+[Fri Mar 27 15:01:21.378 2009] 0.000 sec [all/2/rel 4 (0,20)] [*] Pizza Hut
+[Fri Mar 27 15:01:49.421 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Mar 27 15:02:01.258 2009] 0.000 sec [all/2/rel 4 (0,20)] [*] pizza hut
+[Fri Mar 27 15:02:30.770 2009] 0.000 sec [all/2/rel 2 (0,20)] [*] Papa Johns
+[Wed Apr  8 09:59:43.239 2009] 0.036 sec [all/2/rel 4 (0,20)] [*] Pizza Hut
+[Wed Apr  8 14:27:52.203 2009] 0.067 sec [all/2/rel 4 (0,20)] [*] Pizza Hut
+[Thu Apr  9 10:11:13.145 2009] 0.018 sec [all/2/rel 4 (0,20)] [*] Pizza Hut
+[Thu Apr  9 10:41:22.001 2009] 0.000 sec [all/2/rel 4 (0,20)] [*] Pizza Hut
+[Thu Apr  9 10:42:09.236 2009] 0.000 sec [all/2/rel 4 (0,20)] [*] Pizza Hut
+[Thu Apr  9 10:58:18.836 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Thu Apr  9 10:59:15.118 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Thu Apr  9 11:06:11.628 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Thu Apr  9 11:19:19.993 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Thu Apr  9 11:24:32.368 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Thu Apr  9 11:28:54.498 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Thu Apr  9 12:14:08.755 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Thu Apr  9 12:33:21.807 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Thu Apr  9 12:35:44.596 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Thu Apr  9 12:45:55.763 2009] 0.000 sec [all/2/rel 4 (0,20)] [*] Pizza Hut
+[Thu Apr  9 12:46:41.365 2009] 0.000 sec [all/2/rel 4 (0,20)] [*] Pizza Hut
+[Thu Apr  9 12:48:03.383 2009] 0.000 sec [all/2/rel 4 (0,20)] [*] Pizza Hut
+[Thu Apr  9 12:48:06.775 2009] 0.000 sec [all/2/rel 4 (0,20)] [*] Pizza Hut
+[Thu Apr  9 12:49:54.569 2009] 0.000 sec [all/2/rel 5 (0,20)] [*] Firebirds
+[Thu Apr  9 19:39:49.634 2009] 0.051 sec [all/2/rel 5 (0,20)] [*] Firebirds
+[Thu Apr  9 19:40:07.003 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Thu Apr 16 13:57:20.613 2009] 0.075 sec [all/2/rel 12 (0,20)] [*] pizza
+[Thu Apr 16 18:36:01.115 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Thu Apr 16 18:39:40.646 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Thu Apr 16 18:40:55.979 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Thu Apr 16 18:41:08.916 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Thu Apr 16 18:41:16.219 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Thu Apr 16 18:41:22.846 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Thu Apr 16 18:42:42.477 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Apr 17 09:38:38.370 2009] 0.015 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Apr 17 09:39:59.587 2009] 0.022 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 15:33:02.277 2009] 0.018 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 15:33:04.506 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 15:45:06.980 2009] 0.092 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 15:45:08.783 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:01:02.380 2009] 0.018 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:01:04.193 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:01:34.102 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:01:35.758 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:02:26.404 2009] 0.017 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:02:28.354 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:04:49.351 2009] 0.048 sec [all/2/rel 0 (0,20)] [*] p[izza
+[Mon Apr 20 16:04:56.901 2009] 0.061 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:04:58.724 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:06:07.621 2009] 0.059 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:06:09.888 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:06:21.881 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:06:23.849 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:07:14.643 2009] 0.061 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:07:16.699 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:08:53.987 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:08:56.165 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:10:39.389 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:10:41.467 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:12:28.985 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:12:31.140 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:13:34.779 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:13:36.854 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:14:53.634 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:14:55.640 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:16:23.672 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:16:25.642 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:17:09.473 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:17:11.466 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:18:29.283 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:18:31.298 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:20:25.863 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:20:28.003 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:22:30.973 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:22:33.179 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:28:59.815 2009] 0.071 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:29:01.569 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:29:24.398 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:29:33.537 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:29:38.076 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:30:35.600 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:30:37.273 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:32:31.877 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:32:34.175 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:36:20.388 2009] 0.055 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:36:23.979 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:36:51.629 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:36:53.795 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:37:04.201 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:37:06.309 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:37:53.250 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:37:55.035 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:38:06.181 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:38:08.150 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:41:59.586 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:42:01.598 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:42:13.276 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:42:15.211 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:42:25.001 2009] 0.065 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:42:27.756 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:46:01.196 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:46:03.172 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:46:55.219 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:46:57.027 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:47:35.476 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:47:37.269 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:52:18.578 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:52:20.767 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:53:34.795 2009] 0.057 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:53:36.729 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:54:24.748 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:54:26.608 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:55:13.754 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:55:15.638 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:55:26.707 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:55:28.393 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 16:55:48.029 2009] 0.058 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 16:55:49.782 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 17:00:06.941 2009] 0.053 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 17:00:10.425 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 17:04:07.806 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 17:04:09.788 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 17:05:10.988 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 17:05:13.319 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 17:06:01.748 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 17:06:03.557 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 17:06:47.938 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 17:06:49.575 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 17:21:27.802 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 17:21:30.050 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 17:26:23.689 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 17:26:25.721 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 17:28:03.408 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 17:28:05.902 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 17:28:24.582 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 17:28:26.612 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 17:28:41.444 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 17:28:43.494 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 17:29:02.490 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 17:29:04.416 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 17:31:00.325 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 17:31:02.261 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 17:31:39.541 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 17:31:41.488 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 17:32:26.397 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 17:32:28.215 2009] 0.000 sec [all/2/rel 0 (0,20)] [*] mapiconmaker_packed
+[Mon Apr 20 17:58:02.813 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 17:58:25.197 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 18:00:33.913 2009] 0.060 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 18:01:36.924 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 21:56:51.664 2009] 0.055 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 21:57:52.305 2009] 0.011 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 21:59:17.437 2009] 0.060 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 22:00:02.557 2009] 0.015 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 22:00:20.793 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 22:01:27.568 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 22:02:28.701 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 22:03:37.746 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 22:04:14.276 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 22:05:05.091 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 22:05:05.211 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 22:08:01.369 2009] 0.051 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 22:09:12.817 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 22:09:50.289 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 22:10:01.558 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 22:10:49.313 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 22:11:21.747 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Apr 20 22:12:09.746 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 21 07:59:33.714 2009] 0.057 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 21 08:06:00.355 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 21 08:06:39.396 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 21 08:08:04.748 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 21 08:09:08.091 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 21 08:12:45.154 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 21 08:13:07.776 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 21 08:15:29.880 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 21 08:16:42.279 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 21 08:17:53.331 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 21 08:23:34.574 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 21 08:24:25.367 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 21 08:31:04.700 2009] 0.432 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 21 08:32:08.089 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 21 08:34:09.968 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 21 08:34:16.114 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 21 08:36:36.873 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 21 08:37:04.537 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 21 08:37:21.966 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 21 08:38:07.754 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 21 08:38:53.706 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 21 08:40:03.156 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 21 08:40:18.044 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 21 08:40:50.460 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 21 08:41:15.069 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 21 08:42:30.212 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 21 08:43:16.999 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 21 08:49:37.497 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 28 12:16:47.869 2009] 0.046 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 28 12:18:01.243 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 28 12:18:38.878 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 28 12:26:05.761 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Apr 28 13:37:16.784 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Thu Apr 30 13:21:26.380 2009] 0.032 sec [all/2/rel 12 (0,20)] [*] pizza
+[Sun May 17 16:26:51.818 2009] 0.002 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon May 18 11:04:27.698 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon May 18 11:05:42.532 2009] 0.000 sec [all/2/rel 2 (0,20)] [*] tuffy
+[Mon May 18 11:19:47.190 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon May 18 11:20:13.524 2009] 0.000 sec [all/2/rel 2 (0,20)] [*] papa johns
+[Mon May 18 11:20:15.040 2009] 0.000 sec [all/2/rel 2 (0,20)] [*] papa johns
+[Mon May 18 11:20:24.788 2009] 0.000 sec [all/2/rel 2 (0,20)] [*] papa johns
+[Mon May 18 12:29:43.554 2009] 0.000 sec [all/2/rel 2 (0,20)] [*] papa
+[Mon May 18 12:29:53.009 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon May 18 12:30:11.954 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon May 18 12:30:38.879 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon May 18 14:05:43.034 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon May 18 15:26:37.711 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Mon Jun  1 15:59:28.241 2009] 0.035 sec [all/2/rel 12 (0,20)] [*] pizza
+[Tue Jun  2 15:18:32.274 2009] 0.014 sec [all/2/rel 12 (0,20)] [*] pizza
+[Wed Jun  3 10:45:46.352 2009] 0.066 sec [all/2/rel 12 (0,20)] [*] pizza
+[Wed Jun  3 11:39:16.367 2009] 0.029 sec [all/2/rel 12 (0,20)] [*] pizza
+[Wed Jun  3 17:02:01.478 2009] 0.017 sec [all/2/rel 12 (0,20)] [*] pizza
+[Wed Jun  3 17:02:13.360 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Wed Jun  3 17:02:30.712 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Wed Jun  3 17:03:14.905 2009] 0.081 sec [all/2/rel 6 (0,20)] [*] wings
+[Wed Jun  3 17:03:24.566 2009] 0.000 sec [all/2/rel 6 (0,20)] [*] wings
+[Wed Jun  3 17:03:33.254 2009] 0.000 sec [all/2/rel 6 (0,20)] [*] wings
+[Wed Jun  3 17:15:36.417 2009] 0.000 sec [all/2/rel 6 (0,20)] [*] wings
+[Wed Jun  3 17:16:52.471 2009] 0.000 sec [all/2/rel 6 (0,20)] [*] wings
+[Wed Jun  3 17:17:50.774 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Wed Jun  3 20:20:36.664 2009] 0.039 sec [all/2/rel 12 (0,20)] [*] pizza
+[Wed Jun  3 20:26:52.634 2009] 0.059 sec [all/2/rel 6 (0,20)] [*] wings
+[Wed Jun  3 20:27:20.873 2009] 0.000 sec [all/2/rel 6 (0,20)] [*] wings
+[Wed Jun  3 20:27:35.826 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Wed Jun  3 21:18:07.659 2009] 0.055 sec [all/2/rel 12 (0,20)] [*] pizza
+[Wed Jun  3 21:19:35.215 2009] 0.000 sec [all/2/rel 6 (0,20)] [*] wings
+[Wed Jun  3 21:20:56.268 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Wed Jun  3 21:22:09.609 2009] 0.000 sec [all/2/rel 6 (0,20)] [*] wings
+[Thu Jun  4 11:04:51.217 2009] 0.027 sec [all/2/rel 6 (0,20)] [*] wings
+[Thu Jun  4 11:07:00.166 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Thu Jun  4 16:37:44.941 2009] 0.099 sec [all/2/rel 12 (0,20)] [*] pizza
+[Thu Jun  4 16:39:59.133 2009] 0.065 sec [all/2/rel 12 (0,20)] [*] pizza
+[Thu Jun  4 16:40:31.904 2009] 0.037 sec [all/2/rel 12 (0,20)] [*] pizza
+[Thu Jun  4 16:42:11.298 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Thu Jun  4 16:42:29.350 2009] 0.069 sec [all/2/rel 12 (0,20)] [*] pizza
+[Thu Jun  4 16:46:38.482 2009] 0.053 sec [all/2/rel 12 (0,20)] [*] pizza
+[Thu Jun  4 16:47:16.041 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 11:04:22.580 2009] 0.019 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 11:22:13.733 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 11:22:59.311 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 11:23:09.026 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 11:23:33.972 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 11:24:08.773 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 11:24:20.310 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 11:24:25.614 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 11:24:49.116 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 11:24:59.248 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 11:25:05.899 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 11:26:34.550 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 11:26:42.271 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 11:45:22.879 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 11:45:50.601 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 11:47:58.376 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 11:48:05.631 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 11:48:23.530 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 11:48:32.243 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 11:48:41.819 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 11:48:51.827 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 11:55:50.127 2009] 0.001 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 11:55:57.120 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 11:56:05.375 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 11:57:23.114 2009] 0.057 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 12:02:40.261 2009] 0.010 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 12:03:11.016 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 12:03:28.066 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 12:04:03.411 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 12:05:18.862 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 12:05:40.935 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 12:05:55.544 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 12:09:03.096 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 12:09:35.960 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 12:09:42.542 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Fri Jun  5 12:10:08.794 2009] 0.000 sec [all/2/rel 12 (0,20)] [*] pizza
+[Wed Jun 17 23:11:04.510 2009] 0.080 sec [all/2/rel 12 (0,1000)] [*] pizza
+[Thu Jun 18 16:44:25.410 2009] 0.094 sec [all/2/rel 37 (0,1000)] [*] restaurant
+[Thu Jun 18 16:44:42.662 2009] 0.115 sec [all/2/rel 37 (0,1000)] [*] restaurant
+[Sat Jun 20 01:08:46.362 2009] 0.037 sec [all/2/rel 37 (0,1000)] [*] restaurant
+[Sat Jun 20 01:10:54.494 2009] 0.000 sec [all/2/rel 37 (0,1000)] [*] restaurant
+[Mon Jun 29 09:27:30.984 2009] 0.066 sec [all/2/rel 9 (0,1000)] [*] tires
+[Sat Aug 22 19:55:02.468 2009] 0.022 sec [scan/2/rel 1 (0,20)] [business_core] 
+[Sat Aug 22 19:55:53.533 2009] 0.000 sec [scan/2/rel 1 (0,20)] [business_core] 
+[Sat Aug 22 20:00:32.275 2009] 0.000 sec [scan/2/rel 1 (0,20)] [business_core] 
+[Sat Aug 22 20:27:45.729 2009] 0.000 sec [scan/2/rel 1 (0,20)] [business_core] 
+[Sat Aug 22 20:53:35.275 2009] 0.000 sec [scan/2/rel 1 (0,20)] [business_core] 
+[Sat Aug 22 20:54:02.273 2009] 0.000 sec [scan/2/rel 1 (0,20)] [business_core] 
+[Sat Aug 22 20:56:05.935 2009] 0.000 sec [scan/2/rel 1 (0,20)] [business_core] 
+[Sat Aug 22 21:32:41.757 2009] 0.043 sec [all/2/rel 0 (0,20)] [*] pi
+[Sat Aug 22 21:32:43.304 2009] 0.000 sec [all/2/rel 18 (0,1000)] [*] pizza
+[Sat Aug 22 21:34:47.629 2009] 0.000 sec [all/2/rel 18 (0,1000)] [*] pizza
+[Sat Aug 22 21:36:05.513 2009] 0.000 sec [all/2/rel 18 (0,1000)] [*] pizza
+[Sat Aug 22 21:36:54.747 2009] 0.000 sec [all/2/rel 18 (0,1000)] [*] pizza
+[Sat Aug 22 22:00:57.569 2009] 0.000 sec [scan/2/rel 1 (0,20)] [business_core] 
+[Sat Aug 22 22:02:39.242 2009] 0.000 sec [scan/2/rel 1 (0,20)] [business_core] 
+[Sat Aug 22 22:03:03.089 2009] 0.000 sec [scan/2/rel 1 (0,20)] [business_core] 
+[Sat Aug 22 22:09:34.052 2009] 0.000 sec [scan/2/rel 1 (0,20)] [business_core] 
+[Sat Aug 22 22:17:09.930 2009] 0.000 sec [scan/2/rel 1 (0,20)] [business_core] 
+[Sat Aug 22 22:29:32.195 2009] 0.000 sec [scan/2/rel 1 (0,20)] [business_core] 
+[Sat Aug 22 22:39:18.964 2009] 0.000 sec [scan/2/rel 1 (0,20)] [business_core] 
+[Sat Aug 22 22:45:32.732 2009] 0.000 sec [scan/2/rel 1 (0,20)] [business_core] 
+[Sat Aug 22 22:55:14.947 2009] 0.000 sec [scan/2/rel 1 (0,20)] [business_core] 
+[Sat Aug 22 22:59:41.779 2009] 0.000 sec [scan/2/rel 1 (0,20)] [business_core] 
+[Sat Aug 22 23:00:47.899 2009] 0.000 sec [scan/2/rel 1 (0,20)] [business_core] 
+[Sat Aug 22 23:02:17.668 2009] 0.000 sec [scan/2/rel 1 (0,20)] [business_core] 
+[Sat Aug 22 23:04:03.000 2009] 0.000 sec [scan/2/rel 1 (0,20)] [business_core] 
+[Wed Sep  2 13:46:35.852 2009] 0.074 sec [scan/2/rel 1 (0,20)] [business_core] 
+[Tue Sep 22 18:18:45.826 2009] 0.059 sec [all/2/rel 18 (0,1000)] [*] pizza
+[Thu Oct  8 12:51:47.740 2009] 0.099 sec [all/2/rel 5 (0,1000)] [*] pasta
+[Fri Oct  9 09:18:15.838 2009] 0.202 sec [all/2/rel 37 (0,1000)] [*] restaurant
+[Fri Oct  9 09:18:27.111 2009] 0.024 sec [all/2/rel 37 (0,1000)] [*] restaurant
+[Wed Oct 14 16:29:45.658 2009] 0.059 sec [all/2/rel 18 (0,1000)] [*] pizza
+[Wed Oct 14 16:30:03.889 2009] 0.000 sec [all/2/rel 0 (0,1000)] [*] pastum
+[Wed Oct 14 16:30:11.142 2009] 0.000 sec [all/2/rel 0 (0,1000)] [*] pastum
+[Wed Oct 14 16:30:27.537 2009] 0.000 sec [all/2/rel 0 (0,1000)] [*] pastum
+[Wed Oct 14 16:34:22.553 2009] 0.025 sec [all/2/rel 5 (0,1000)] [*] pasta
+[Mon Nov  9 13:26:06.624 2009] 0.029 sec [all/2/rel 37 (0,1000)] [*] restaurant
+[Mon Nov  9 13:28:34.019 2009] 0.000 sec [all/2/rel 37 (0,1000)] [*] restaurant
+[Mon Nov  9 13:28:54.901 2009] 0.000 sec [all/2/rel 37 (0,1000)] [*] restaurant
+[Mon Nov  9 13:43:43.143 2009] 0.000 sec [all/2/rel 37 (0,1000)] [*] restaurant
+[Sun May  2 17:12:49.230 2010] 0.034 sec [all/2/rel 18 (0,1000)] [*] pizza
+[Sun May  2 17:15:58.374 2010] 0.000 sec [all/2/rel 18 (0,1000)] [*] pizza
+[Sun May  2 17:16:57.631 2010] 0.000 sec [all/2/rel 18 (0,1000)] [*] pizza
+[Sun May  2 17:18:27.410 2010] 0.000 sec [all/2/rel 18 (0,1000)] [*] pizza
+[Sun May  2 19:29:16.494 2010] 0.018 sec [all/2/rel 18 (0,1000)] [*] pizza
+[Sun May  2 19:30:13.721 2010] 0.000 sec [all/2/rel 18 (0,1000)] [*] pizza
+[Sun May  2 19:30:30.090 2010] 0.000 sec [all/2/rel 18 (0,1000)] [*] pizza
+[Sun May  2 19:33:46.782 2010] 0.000 sec [all/2/rel 18 (0,1000)] [*] pizza

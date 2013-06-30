@@ -1,0 +1,136 @@
+<% show ||= false %>
+
+<% @title =  "#{@business.name} #{link_to(image_tag('pencil.png'), edit_account_business_path(@account, @business)) unless show}" %>
+
+<%=render :partial => 'businesses/googlemap', :locals => {:location => @business.location}%>
+
+<div class="vcard">
+<% content_for("sidebar") do -%>
+  <%= render :partial => "shared/admin_menu", :locals => {:style => "wide"}%>
+	<div class="clear_fix"></div>
+  
+	<% unless @business.logo.blank? %>
+	<div id='business_logo' class="side_box">
+	  <h3>Active Logo</h3>
+		<p align="center">
+			<%= medium_link @business.logo, :width => 250 %>
+		</p>
+		<% if @business.override_logo? %>
+	    <p class="helpful"><strong>Corporate logo is being over-ridden</strong></p>
+	  <% end %>
+	</div>
+	
+	<% end -%>
+
+	<%= render :partial => 'businesses/map', :locals => { :location => @business.location } %>
+  
+	<% if @business.photos? %>
+	<div id='business_images' class="side_box">
+	  <h3>All Images for Location</h3>
+	  <p class="helpful">Includes corporate images</p>
+		
+		<% for image in @business.photos -%>
+		<p align="center">
+			<%= medium_link image, :width => 250 %>
+		</p>
+		<% end -%>
+		
+	
+		
+	</div>
+	<% end -%>
+	
+	<div id="comments" style="display: none"></div>
+	
+<% end -%>
+
+	<div id="card">
+				
+    <%= "<p class='special_instructions'>This is the Primary Location for this Account</p>" if @business.primary? && !show %>
+		<div id="card_data">
+		  <div class="admin_form">
+			  <h2>Keywords</h2>
+  			<%=[@account.tags, @business.tags].flatten.join(', ') %>
+			</div>
+			<div class="admin_form">
+			<h2>Location</h2>
+			<%=render :partial => 'businesses/location', :object => @business.location %>
+			</div>
+
+			<% unless @business.people.empty? -%>
+			  <div class="admin_form">
+				<h2>People</h2>
+				<% for person in @business.people -%>
+					<%=person %><br/>
+				<% end -%>
+				</div>
+			<% end -%>
+
+			<% unless @business.phones.empty? -%>
+			<div class="admin_form">
+				<h2>Phone Numbers</h2>
+				<% for phone in @business.phones -%>
+					<div class="tel">
+						<span class="type"><%=phone.phone_type%></span>: 
+						<span class="value"><%=phone.formatted_number %></span>
+					</div>
+				<% end -%>
+				</div>
+			<% end -%>
+
+			<% unless @business.email_addresses.empty? -%>
+			<div class="admin_form">
+				<h2>Email</h2>
+				<% for email in @business.email_addresses -%>
+					<%="#{email.label}: " unless email.label.blank? %> 
+					<a class="email" href="mailto:<%=email.address%>"><%=email.address %></a><br/>
+				<% end -%>
+				</div>
+			<% end -%>
+
+			<% unless @business.websites.empty? -%>
+			<div class="admin_form">
+				<h2>Websites</h2>
+				<% for website in @business.websites -%>
+					<a class="url" href="<%=website.url%>" rel="work" target="_new"><%=website.url%></a><br/>
+				<% end -%>
+				</div>
+			<% end -%>
+
+			<% if @business.schedule? -%>
+			<div class="admin_form">
+				<h2>Hours</h2>
+				<% if @business.schedule.all_hours? %>
+					<p>This business is open 24x7</p>
+				<% else -%>
+					<%=render :partial => 'businesses/schedule', :object => @business.schedule %>
+				<% end -%>
+				</div>
+			<% end -%>
+
+
+		</div>
+	</div>
+	
+	<div class="admin_form clear" id="media">
+    <h2>Images for This Location Only <%=add_item_link :form, 'image', Image.new, 'image', 'submit'%></h2> 
+    <p>These images are available for this location only. If you wish to override the corporate logo, make sure your replacement logo is first.</p>
+  	<div class="form">
+  	  <% form_for [@account, @business], :html => { :multipart => true } do |f| %>
+  		<div id="form"></div>
+  		<p style="display:none;" id="submit"><%= submit_tag "Add Image" %></p>
+  		<% end %>			
+  	</div>
+  	<div class="gallery_images">
+  	  <p>You can re-order your images by dragging them up and down in the list. The order will be automatically saved.</p>
+  		<ul id="images">
+  			<% @business.images.each do |image| %>
+  			<li id="image_<%=image.id%>">
+  				<%= render :partial => 'image', :object => image %>
+  			</li>
+  			<% end -%>
+  		</ul>
+  	</div>
+  </div>
+
+</div>

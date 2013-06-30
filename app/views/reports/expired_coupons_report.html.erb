@@ -1,0 +1,19 @@
+<% @title = "Expired Coupons Report" %>
+
+<a name="expired"/>
+<table class="data">
+  <th class="actions_4">Action</th>
+  <th>ID</th>
+  <th><%= render_sort_link("expired", "business_name", @expired_sort) %></th>
+  <th>Coupon</th>
+  <th>Offer</th>
+  <th><%= render_sort_link("expired", "start_date", @expired_sort) %></th>
+  <th><%= render_sort_link("expired", "end_date", @expired_sort) %></th>
+  <% unless @expiring.blank? %>
+    <%= render :partial => "coupon_templates/coupon_template", :collection =>  @expired, :locals => {:show_business => true, :prefix => 'expired_'} %>
+  <% else %>
+    <tr><td colspan="7"><p class="margin_top_10">There are no expired coupons in the system currently.</p></td></tr>
+  <% end %>  
+</table>
+
+<p class="margin_top_10"><%= link_to "Go back to all reports", reports_path %></p>

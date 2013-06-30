@@ -1,0 +1,39 @@
+<% @title = "Manage Affiliate Group Memberships #{link_to image_tag('add.png'), new_affiliate_group_membership_path, :title => 'New affiliate group membership'}" %>
+
+<%= render :partial => "shared/admin_menu" %>
+<p>Affiliate Group Memberships are used to create collections of affiliates that can be associated together for common web sites. To view or create affiliates, <%= link_to 'go here', affiliates_path %>. To create new affiliate groups, <%= link_to 'go here', affiliate_groups_path %>.</p>
+
+<table class="data">
+  <tr>
+    <th></th>
+    <th>Affiliate Group</th>
+    <th>Affiliate</th>
+    <th>Active?</th>
+  </tr>
+
+<% @affiliate_group_memberships.each do |affiliate_group_membership| %>
+  <% menu_id = "item_menu_#{affiliate_group_membership.id}" %>
+  <tr onmouseover="$('<%=menu_id%>').style.visibility='visible'" 
+      	  onmouseout="$('<%=menu_id%>').style.visibility='hidden'" class="<%= cycle("odd", "even") -%>" id="<%=dom_id(affiliate_group_membership)%>">
+    <td>  <div id="<%=menu_id%>" class="item_menu">
+  		<%= link_to(image_tag('bin.png', :title=>"Delete this affiliate group membership"), affiliate_group_membership, 
+  				:confirm => "This will permanently remove this affiliate from this affiliate group in our system. This cannot be undone. Are you sure you want to do this?", 
+					:method => :delete) %>
+  	  
+  	  </div>
+  	</td>
+    <td><%= link_to affiliate_group_membership.affiliate_group.name, affiliate_group_membership.affiliate_group %></td>
+    <td><%= link_to affiliate_group_membership.affiliate.name, affiliate_group_membership.affiliate %></td>
+    <td id="status_<%= dom_id(affiliate_group_membership) -%>"><%= render :partial => "status", :locals => {:affiliate_group_membership => affiliate_group_membership }%></td>
+  </tr>
+<% end %>
+<% if @affiliate_group_memberships.blank? %>
+  <tr><td colspan="3">There are no affiliates assigned to affiliate groups currently in the system.</td></tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Assign an affiliate to an affiliate group', new_affiliate_group_membership_path %> | <%= link_to 'Manage Affiliates', affiliates_path %> | <%= link_to 'Manage Affiliate Groups', affiliate_groups_path %>
+
+<div class="clear_fix"></div>

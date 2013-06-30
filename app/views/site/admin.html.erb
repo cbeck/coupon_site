@@ -1,0 +1,40 @@
+<% @title = 'Site Administration' %>
+
+<%= render :partial => "shared/admin_menu", :locals => {:style => "top"}%>
+
+<h3>Active Coupons</h3>
+<table class="data">
+  <th class="actions_4">Action</th>
+  <th>ID</th>
+  <th><%= render_admin_link("active", "business_name", @active_sort) %></th>  
+  <th>Coupon</th>
+  <th><%= render_admin_link("active", "start_date", @active_sort) %></th>
+  <th><%= render_admin_link("active", "end_date", @active_sort) %></th>
+  <%= render :partial => "coupon_templates/coupon_template", :collection =>  @active_coupons, :locals => {:show_business => true} %>
+</table>
+
+<h3>Expiring Coupons</h3>
+<a name="expiring">
+<table class="data">
+  <th class="actions_4">Action</th>
+  <th>ID</th>
+  <th><%= render_admin_link("expiring", "business_name", @expiring_sort, "expiring") %></th>
+  <th>Coupon</th>
+  <th><%= render_admin_link("expiring", "start_date", @expiring_sort, "expiring") %></th>
+  <th><%= render_admin_link("expiring", "end_date", @expiring_sort, "expiring") %></th>
+  <%= render :partial => "coupon_templates/coupon_template", :collection =>  @expiring, :locals => {:show_business => true, :prefix => 'expiring_'} %>
+</table>
+</a>
+
+<h3>Active Businesses</h3>
+<table class="data">
+  <th>Action</th>
+  <th>Business Name</th>
+  <th>Affiliate</th>
+  <%= render :partial => 'accounts/account', :collection => @accounts, :locals => {:hide => true, :prefix => 'active_'}%>
+</table>
+
+
+
+
+

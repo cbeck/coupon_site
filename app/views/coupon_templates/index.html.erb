@@ -1,0 +1,22 @@
+<% @title =  "#{@account.name} Coupon Management #{link_to image_tag('add.png'), new_account_coupon_template_path(@account), :title => 'Add new coupon'}" %>
+
+<%= render :partial => "shared/admin_menu"%>
+
+<table id="items" class="data">
+  <tr>
+    <th class="actions_4"></th>
+    <th>ID</th>
+    <th>Coupon Name</th>
+    <th>Offer</th>
+    <th>Start Date</th>
+    <th>Expiration Date</th>
+  </tr>
+
+<%= render :partial => @coupon_templates %>
+
+</table>
+
+<br />
+
+<%= link_to 'Create new coupon', new_account_coupon_template_path(@account) %> |
+<%= link_to 'View account info', account_path(@account) %>

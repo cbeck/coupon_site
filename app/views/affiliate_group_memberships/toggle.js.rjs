@@ -1,0 +1,2 @@
+show_ajax_flash_messages({},page)
+page["status_#{dom_id(@affiliate_group_membership)}"].replace_html :partial => 'status', :locals => {:affiliate_group_membership => @affiliate_group_membership}

@@ -1,0 +1,41 @@
+<% @title = "Domain Management #{link_to image_tag('add.png'), new_domain_path, :title => 'Add new domain'}" %>
+
+<%= render :partial => "shared/admin_menu"%>
+<p>Use this page to create new affiliate sites. Currently, the process must be accompanied by some minor development. In the future, this will all be automated.</p>
+<table class="data">
+  <tr>
+    <th></th>
+    <th>Site Name</th>
+    <th>URL</th>
+    <th>Theme Name</th>
+    <th>Affiliate or Affiliate Group</th>
+  </tr>
+
+<% @domains.each do |domain| %>
+  <% menu_id = "item_menu_#{domain.id}" %>
+  <tr onmouseover="$('<%=menu_id%>').style.visibility='visible'" 
+    	  onmouseout="$('<%=menu_id%>').style.visibility='hidden'" class="<%= cycle("odd", "even") -%>" id="<%=dom_id(domain)%>">
+    	<td>  <div id="<%=menu_id%>" class="item_menu">
+    		<%= link_to(image_tag('bin.png', :title=>"Delete #{domain.name}"), domain, 
+    				:confirm => "This will permanently delete all information for #{domain.name} from our system. This cannot be undone. Are you sure you want to do this?", 
+  					:method => :delete) %>
+    	  <%= link_to image_tag('pencil.png', :title=>"Edit #{domain.name}"), 
+    					edit_domain_path(domain) %>
+    	  </div>
+    	</td>
+    <td><%= link_to domain.display_name, domain %></td>
+    <td><%= domain.url %></td>
+    <td><%= domain.theme_name %></td>
+    <td><%= domain.affiliate_group.name %></td>
+  </tr>
+<% end %>
+<% if @domains.blank? %>
+  <tr><td colspan="3">There are no domains in the system currently. CarolinaCoupons.com will be used as the default.</td></tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Domain', new_domain_path %> | <%= link_to 'Manage Affiliate Groups', affiliate_groups_path %> 
+<div class="clear_fix"></div>
+

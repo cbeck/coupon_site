@@ -1,0 +1,27 @@
+<% @title = "New ad" %>
+
+<% form_for @ad, :html => { :multipart => true } do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :click_url %><br />
+    <%= f.text_field :click_url %>
+  </p>
+  <p>
+    <%= f.label :enabled %><br />
+    <%= f.check_box :enabled %>
+  </p>
+  <h6>Image</h6>
+	<p>
+  Upload: <%= f.file_field :image_file %><br/>
+  <strong>or</strong> URL to the image: <%= f.text_field :image_file_url %>
+	<p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Cancel and go back to ad list', ads_path %>

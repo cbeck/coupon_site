@@ -1,0 +1,17 @@
+<p>
+  <b>Coupon:</b>
+  <%=h @clipped_coupon.coupon_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @clipped_coupon.user_id %>
+</p>
+
+<p>
+  <b>Favorite:</b>
+  <%=h @clipped_coupon.favorite %>
+</p>
+
+
+<%= link_to 'Back', user_clipped_coupons_path(current_user) %>

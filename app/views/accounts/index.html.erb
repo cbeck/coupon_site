@@ -1,0 +1,26 @@
+<% @title = "All Business Accounts #{link_to image_tag('add.png'), new_account_path, :title => 'Add new account'}"%>
+
+<%= render :partial => "shared/admin_menu"%>
+<div>
+<% form_tag accounts_path, :method => 'get' do %>
+    <%= text_field_tag :account_search, params[:account_search] %>
+    <%= submit_tag "Search", :name => nil %>
+    <%= link_to image_tag("cancel.png", :title=>"Clear Search"), accounts_path%>
+<% end %>
+</div>
+  
+<table id="items" class="data">
+  <tr>
+    <th class="actions_3"></th>
+    <th>Name</th>
+    <th>Affiliate</th>
+    <th>Billing name</th>
+    <th>Internal identifier</th>
+  </tr>
+<%= render :partial => @accounts %>
+</table>
+
+<%= will_paginate @accounts %>
+
+<p class="margin_top_10"><%= link_to 'Create new business account', new_account_path %></p>
+<div class="clear_fix"></div>

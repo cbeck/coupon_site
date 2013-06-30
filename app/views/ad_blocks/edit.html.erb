@@ -1,0 +1,32 @@
+<h1>Editing ad_block</h1>
+
+<% form_for(@ad_block) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </p>
+  <p>
+    <%= f.label :available_placements %><br />
+    <%= f.text_field :available_placements %>
+  </p>
+  <p>
+    <%= f.label :orientation %><br />
+    <%= f.text_field :orientation %>
+  </p>
+  <p>
+    <%= f.label :columns %><br />
+    <%= f.text_field :columns %>
+  </p>
+  <p>
+    <%= f.label :stylesheet %><br />
+    <%= f.text_area :stylesheet %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @ad_block %> |
+<%= link_to 'Back', ad_blocks_path %>

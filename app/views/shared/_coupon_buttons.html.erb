@@ -1,0 +1,29 @@
+<% as_columns ||= false %>
+<% if as_columns %>
+  <td class="coupon_action"><%= render_coupon_link coupon %></td>
+  <td class="coupon_action">
+    <% if logged_in? %>
+      <%= link_to_remote(image_tag('icons/clip.png'), :url => user_clipped_coupons_path(current_user, :coupon_id => coupon))%>
+      <%= link_to_remote "Clip", :url => user_clipped_coupons_path(current_user, :coupon_id => coupon) %>
+    <% else %>
+      <%= link_to(image_tag('icons/clip.png'), signup_path(:coupon_id => coupon))%>
+      <%= link_to "Clip", signup_path(:coupon_id => coupon) %>
+    <% end %>
+  </td>
+  <td class="coupon_action"><%= link_to(image_tag('icons/print.png'), coupon) %> <%= link_to "Print", coupon %></td>
+<% else %>
+<div class="coupon_action"><%= render_coupon_link coupon %></div>
+<div class="coupon_action">
+  <% if logged_in? %>
+    <%= link_to_remote(image_tag('icons/clip.png'), :url => user_clipped_coupons_path(current_user, :coupon_id => coupon))%>
+    <%= link_to_remote "Clip", :url => user_clipped_coupons_path(current_user, :coupon_id => coupon) %>
+  <% else %>
+    <%= link_to(image_tag('icons/clip.png'), signup_path(:coupon_id => coupon))%>
+    <%= link_to "Clip", signup_path(:coupon_id => coupon) %>
+  <% end %>
+</div>
+<div class="coupon_action last"><%= link_to(image_tag('icons/print.png'), coupon) %> <%= link_to "Print", coupon %></div>
+<% end %>
+
+  
+

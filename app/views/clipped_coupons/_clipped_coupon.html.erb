@@ -1,0 +1,25 @@
+<% unless clipped_coupon.coupon.blank? %>
+<td>
+  <div class="coupon_container small">
+    <% path = render_coupon_path(clipped_coupon.coupon, clipped_coupon)%>
+    <div class="coupon coupon_click_area mini_coupon_item" onclick="<%= path -%>;">
+        <%= render :partial => "coupons/coupon_item", :object => clipped_coupon.coupon %>
+    </div> 
+    <div class="mini_coupon_buttons">   
+      <div class="coupon_action"><%= render_coupon_link clipped_coupon.coupon, clipped_coupon %></div>
+      <div class="coupon_action">
+        <%= link_to image_tag('icons/delete.png', :title=>"Remove this coupon"), [current_user, clipped_coupon], :method => :delete %>
+        <%= link_to "Trash", [current_user, clipped_coupon], :method => :delete %>
+      </div>
+      <div class="coupon_action last"><%= link_to(image_tag('icons/print.png'), clipped_coupon.coupon) %> <%= link_to "Print", clipped_coupon.coupon %></div>
+      <div class="clear_fix dot">&nbsp;</div>
+    </div>
+    <div class="mini_coupon_multi_print">
+      <div class="coupon_action print">
+        <%= check_box_tag "coupons[]", clipped_coupon.coupon.id %> Select for Printing Multiples
+      </div>
+    </div>
+  </div>
+</td>
+<% end %>
+

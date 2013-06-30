@@ -1,0 +1,26 @@
+<div class="location">
+<% location_form.fields_for :location, location do |loc| %>
+
+  <div class="single_row_form_fields">
+    <label for="address">Address</label><br/>
+    <%= loc.text_field :address_line1, :size => 40 %><br/>
+    <span class="address_line2"><%= loc.text_field :address_line2, :size => 40 %></span>
+  </div>
+  <div class="single_row_form_fields locality">
+    <label for="city">City</label><br/>
+    <%= loc.text_field :city, :size => 15 %>
+  </div>
+  <div class="single_row_form_fields region">
+    <label for="state">State</label><br/>
+		<%= loc.text_field :state, :size => 15 %>
+    <%#= loc.collection_select(:state, states, :code, :name, { :include_blank => true}) %>
+  </div>
+  <div class="single_row_form_fields postal-code">
+    <label for="postal_code">Postal Code</label><br/>
+    <%= loc.text_field :postal_code, :size => 10 %>
+  </div>
+
+	<label for="display">Hide address in search results?</label>
+	<%= loc.check_box :hidden %>
+<% end %>
+</div>

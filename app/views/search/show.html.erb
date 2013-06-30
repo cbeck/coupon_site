@@ -1,0 +1,67 @@
+<% content_for("page_scripts") do -%>
+<script type="text/javascript">
+	function change_radius(radius) {
+		$('search_radius').value = radius;
+		$('search_radius').form.submit();
+	}
+	function change_pagesize(pagesize) {
+		$('search_pagesize').value = pagesize;
+		$('search_pagesize').form.submit();
+	}
+</script>
+<% end -%>
+
+<%=render :partial => 'search/googlemap', :locals => {:home => @search.geocode}%>
+
+<% unless @coupons.blank? %>
+	<h4 class="regular">Your search returned results for <%= pluralize @accounts.total_entries, "business" %> with <%= pluralize @coupon_count, "coupon" %>.</h4>
+	<% unless @businesses.blank? %>
+  	<div id="map" class="search_map"></div>
+  <% end %>
+  <table class="results" cellspacing="0" cellpadding="0">
+	<tr>
+	  <th colspan="2">PAGE <%=@accounts.current_page%> OF <%=@accounts.total_pages%> (<%=@accounts.total_entries%> RESULTS)</th>
+	  <th class="text_right">SHOW ALL RESULTS</th>
+	</tr>
+  <tr class="results_subhead">
+    <td colspan="3">
+			<div style="float: left">
+  	    SORT BY <%=link_to 'DISTANCE', path_with_sort("distance"), :class => "#{'selected' unless ['name', 'latest'].include?(@sort) }"%> |
+	      <%=link_to 'A-Z', path_with_sort("name"), :class => "#{'selected' if @sort == 'name'}"%> | 
+	      <%=link_to 'LATEST', path_with_sort("latest"), :class => "#{'selected' if @sort == 'latest'}"%> 
+	    </div>
+	
+			<div style="float: right">
+				DISTANCE: 
+				<%=select :search, :radius, Search.radius_options, 
+					{ :selected => @search.radius.to_s }, 
+					{ :id => 'radius_select', :onchange => 'change_radius(this.value);' } %>
+				&nbsp;&nbsp;
+				PER PAGE: 
+				<%=select :search, :pagesize, Search.pagesize_options, 
+					{ :selected => @search.pagesize.to_s }, 
+					{ :id => 'pagesize_select', :onchange => 'change_pagesize(this.value);' } %>
+			</div>
+		</td>
+  </tr>
+	<% 
+		# @businesses.group_by(&:account).each_with_index do |arr, index| 
+		# 	account, businesses = arr
+		@accounts.each_with_index do |account, index|
+	%>
+		<tr class="<%= cycle('odd','even') -%>">
+		  <td class="actions_1"><span class="pinpoint"><%=(?A+index).chr%></span></td>
+		  <td>
+		    <p class="name"><%= link_to account.name.upcase, details_account_path(account.id) %></p>
+		    <p class="tight"><%= pluralize account.businesses.length, "location" %></p>
+		  </td>
+		  <td class="text_right"><p class="caps"><%= pluralize(account.coupon_templates.available.length, "coupon")%></p></td>
+		</tr>
+	<% end -%>
+	<tr class="results_subhead"><td colspan="3" align="right"><%=will_paginate @accounts%></td></tr>
+	</table>
+<% else %>
+	<p>We are sorry, but we could not find any coupons that met your search criteria. Please try again.</p>
+<% end %>
+
+<br clear="both"/>

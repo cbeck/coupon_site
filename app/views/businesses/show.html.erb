@@ -1,0 +1,13 @@
+
+<%= render :partial => "business_details" %>
+
+<div id="page_menu">
+	<%= link_to 'Edit', edit_account_business_path(@account, @business) %> |
+	<%= link_to 'All Businesses for this Account', @account %>
+</div>
+
+<%= sortable_element 'images',
+:url => { :action => "sort_images" , :id => @business.id },
+:complete => visual_effect(:highlight, 'images')
+%>
+

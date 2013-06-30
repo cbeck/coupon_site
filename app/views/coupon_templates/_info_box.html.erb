@@ -1,0 +1,8 @@
+<% fields_for "coupon_template[data][info_box][]", info_box do |f| -%>
+	<div class="info_box">
+		<%= f.label :name, 'Label:' %>
+		<%= f.text_field :name, :size => 25, :index => nil %>
+	  <%= remove_item_link('info_box', info_box, 'remove_info_box') %>
+		<%= existing_field_id(f, info_box) %>
+	</div>
+<% end -%>

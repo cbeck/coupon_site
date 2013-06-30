@@ -1,0 +1,24 @@
+<% @title =  @ad.name %>
+
+<p>
+<%= image_tag formatted_ad_path(@ad, :jpg) %>
+</p>
+<div class="admin_form margin_top_10">
+  <h2>Basic Ad Info</h2>
+<p><b>ID:</b>
+<%= @ad.id %>
+
+<p>
+  <b>Click url:</b>
+  <%=h @ad.click_url %>
+</p>
+
+<p>
+  <b>Enabled:</b>
+  <%=h @ad.enabled %>
+</p>
+
+</div>
+<%= link_to 'Edit this ad', edit_ad_path(@ad) %> |
+<%= link_to 'View all ads', ads_path %> | 
+<%= link_to 'Place this ad on the site', new_ad_placement_path(:ad_id => @ad.id)%>

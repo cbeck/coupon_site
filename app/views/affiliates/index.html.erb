@@ -1,0 +1,38 @@
+<% @title = "Affiliate Management #{link_to image_tag('add.png'), new_affiliate_path, :title => 'Add new affiliate'}" %>
+
+<%= render :partial => "shared/admin_menu"%>
+<p>To place an affiliate into an affiliate group, <%= link_to 'go here', affiliate_group_memberships_path %>.</p>
+<table class="data">
+  <tr>
+    <th></th>
+    <th>Name</th>
+    <th>Internal Identifier</th>
+    <th>Billable?</th>
+  </tr>
+
+<% @affiliates.each do |affiliate| %>
+  <% menu_id = "item_menu_#{affiliate.id}" %>
+  <tr onmouseover="$('<%=menu_id%>').style.visibility='visible'" 
+    	  onmouseout="$('<%=menu_id%>').style.visibility='hidden'" class="<%= cycle("odd", "even") -%>" id="<%=dom_id(affiliate)%>">
+    	<td>  <div id="<%=menu_id%>" class="item_menu">
+    		<%= link_to(image_tag('bin.png', :title=>"Delete #{affiliate.name}"), affiliate, 
+    				:confirm => "This will permanently delete all information for #{affiliate.name} from our system. This cannot be undone. Are you sure you want to do this?", 
+  					:method => :delete) %>
+    	  <%= link_to image_tag('pencil.png', :title=>"Edit #{affiliate.name}"), 
+    					edit_affiliate_path(affiliate) %>
+    	  </div>
+    	</td>
+    <td><%= link_to affiliate.name, affiliate %></td>
+    <td><%= affiliate.internal_identifier %></td>
+    <td><%= render_billable_status(affiliate) %></td>
+  </tr>
+<% end %>
+<% if @affiliates.blank? %>
+  <tr><td colspan="3">There are no affiliates in the system currently.</td></tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Affiliate', new_affiliate_path %> | <%= link_to 'Manage Affiliate Groups', affiliate_groups_path %> | <%= link_to 'Place an Affiliate in an Affiliate Group', affiliate_group_memberships_path %>
+<div class="clear_fix"></div>

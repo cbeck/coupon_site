@@ -1,0 +1,23 @@
+<% @title = "Assign an affiliate to an affiliate group" %>
+
+<% form_for(@affiliate_group_membership) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+     <%= f.label :affiliate_id %><br/>
+     <%= f.collection_select :affiliate_id, Affiliate.all, :id, :name, {:prompt => true} %>
+  </p>
+  <p>
+     <%= f.label :affiliate_group_id %><br/>
+     <%= f.collection_select :affiliate_group_id, AffiliateGroup.all, :id, :name, {:prompt => true} %>
+  </p>
+  <p>
+    <%= f.label :active %><br />
+    <%= f.check_box :active %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Cancel and go back to affiliate group memberships list', affiliate_group_memberships_path %>

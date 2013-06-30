@@ -1,0 +1,26 @@
+<%#= render :partial => "shared/large_coupon_css"%>
+<h4 class="regular hide">Print Coupon</h4>
+<div id="details_container">
+  <% unless @coupon.blank? || @coupon.business.blank? %>
+  <div id="print_details">
+    <p class="hide"><%= link_to_function "Print Now", "window.print()" %></p>
+    <p class="print_only center bump_below"><%= render_site_logo(@current_domain, :media) %></p>
+    <%=render :partial => '/businesses/googlemap', :locals => {:location => @coupon.business.location} unless @coupon.business.blank? || @coupon.business.location.blank? %>
+    <%= render :partial => @coupon %>  
+  </div>
+  <div id="mini_coupons_container">
+    <% if @include_map %>
+      <div id="map" class="coupon_map"></div>
+    <% end %>
+  </div>
+  <% else %>
+  <div id="print_details">
+    <p>We're sorry, but that coupon could not be located.</p>
+  </div>
+  <div id="mini_coupons_container">
+    &nbsp;    
+  </div>
+  <% end %>
+  <div class="clear_fix">&nbsp;</div>
+
+</div>

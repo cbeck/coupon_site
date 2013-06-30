@@ -1,0 +1,16 @@
+<%#= render :partial => "shared/large_coupon_css"%>
+<div class="coupon large">
+  <div class="coupon_click_area">
+    <div class="left coupon_logo"><%= small_link modal_coupon.logo unless modal_coupon.logo.blank? %></div>   
+    <div class="left coupon_info">
+      <%= render :partial => "coupons/coupon_item", :object => modal_coupon %>
+    </div> 
+    <div class="right clip_art"><%= small_link coupon.clip_art unless coupon.clip_art.blank? %></div> 
+    <div class="clear_fix left"><%= render_coupon_info(coupon) %></div>
+    <div class="right standard_logo"><%= render_site_logo(@current_domain) %></div>
+    <p class="clear_fix">&nbsp;</p>
+  </div>  
+</div>
+<div class="coupon_buttons">
+<%= render :partial => "shared/coupon_buttons", :locals => {:coupon => coupon }%>
+</div>

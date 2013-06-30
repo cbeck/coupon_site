@@ -1,0 +1,14 @@
+<% prefix ||= "" %>
+<% menu_id = "#{prefix}item_menu_#{offer.id}" %>
+  <tr onmouseover="$('<%=menu_id%>').style.visibility='visible'" 
+  	  onmouseout="$('<%=menu_id%>').style.visibility='hidden'" class="<%= cycle("odd", "even") -%>" id="<%=dom_id(offer)%>">
+  	<td>  <div id="<%=menu_id%>" class="item_menu">
+  		<%= link_to(image_tag('bin.png', :title=>"Delete #{offer.name}"), offer, 
+  				:confirm => "This will permanently delete all information for #{offer.name} from our system. This cannot be undone. Are you sure you want to do this?", 
+					:method => :delete) %>
+  	  <%= link_to image_tag('pencil.png', :title=>"Edit #{offer.name}"), 
+  					edit_offer_path(offer) %>
+  	  </div>
+  	</td>
+    <td><%= link_to offer.name, offer %></td>    
+</tr>

@@ -1,0 +1,9 @@
+<% account ||= @account %>
+<% cycle_2 ||= false %>
+<% unless coupon_template.businesses.empty? %>
+	<%= render :partial => "shared/small_coupon", 
+			:object => coupon_template.coupon_for_business(coupon_template.businesses.first), 
+			:locals => {:show_locations => true, :account => account, :cycle_2 => cycle_2} %>
+<% else %>
+	There are no locations assigned to this coupon
+<% end %>

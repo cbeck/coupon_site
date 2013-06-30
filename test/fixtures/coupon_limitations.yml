@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  coupon_template_id: 1
+  limitation_id: 1
+
+two:
+  coupon_template_id: 1
+  limitation_id: 1

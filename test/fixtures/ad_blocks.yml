@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  location: MyString
+  available_placements: 1
+  orientation: MyString
+  columns: 1
+  stylesheet: MyText
+
+two:
+  location: MyString
+  available_placements: 1
+  orientation: MyString
+  columns: 1
+  stylesheet: MyText

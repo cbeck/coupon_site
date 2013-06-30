@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+affiliate_a:
+  name: Affiliate Group A
+  description: MyText
+
+affiliate_b:
+  name: Affiliate Group A
+  description: MyText

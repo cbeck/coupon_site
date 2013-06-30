@@ -1,0 +1,97 @@
+<% @title =  "#{@account.name} #{"(" + @account.billing_name + ")" unless @account.billing_name.blank?}  #{link_to image_tag('pencil.png'), edit_account_path(@account)}" %>
+
+<%= render :partial => "shared/admin_menu"%>
+
+<% unless @account.businesses.blank? -%>
+	<%=render :partial => 'googlemap' %>
+<% end -%>
+
+<div class="admin_display_group">
+<p>
+  <b>Internal identifier:</b>
+  <%=h @account.internal_identifier %>
+</p>
+
+<% unless @account.businesses.blank? -%>
+	<div id="map" style="width: 500px; height: 200px; border: 1px solid #ddd; margin-bottom: 5px;"></div>
+<% end -%>
+
+<table id="items" class="data">
+	<tr>
+	  <th class="actions_2"></th>
+		<th>Name</th>
+		<th>Location</th>
+		<th width="140">Phone</th>
+	</tr>
+	<%= render :partial => "/businesses/business", :collection => @account.businesses %>
+</table>
+</div>
+
+<div class="clear_fix margin_bottom_10">&nbsp;</div>
+<div class="admin_form" id="keywords">
+	<h2>Keywords</h2>
+	<%=@account.tags.join(', ') %>
+</div>
+
+<div class="admin_form" id="media">
+  <h2>Account Images <%=add_item_link :form, 'image', Image.new, 'image', 'submit'%></h2> 
+  <p>These images will be available to all business locations for this account. The logo should be first.</p>
+	<div class="form">
+	  <% form_for @account, :html => { :multipart => true } do |f| %>
+		<div id="form"></div>
+		<p style="display:none;" id="submit"><%= submit_tag "Add Image" %></p>
+		<% end %>			
+	</div>
+	<div class="gallery_images">
+	  <p>You can re-order your images by dragging them up and down in the list. The order will be automatically saved.</p>
+		<ul id="images">
+			<% @account.images.each do |image| %>
+			<li id="image_<%=image.id%>">
+				<%= render :partial => 'image', :object => image %>
+			</li>
+			<% end -%>
+		</ul>
+	</div>
+</div>
+
+<%= sortable_element 'images',
+:url => { :action => "sort_images" , :id => @account.id },
+:complete => visual_effect(:highlight, 'images')
+%>
+
+<div class="admin_form">
+<h2>Expiring Coupons</h2>
+<% unless @expiring_coupons.blank? %>
+  <ul>
+  <%= render :partial => 'shared/coupon_template', :collection => @expiring_coupons %>
+  </ul>
+<% else %>
+  <p>None.</p>
+<% end %>
+</div>
+
+<div class="admin_form">
+<h2>Coupon Stats</h2>
+<table class="data">
+  <tr>
+  <th>Total Coupons in System</th>
+  <th>Available Coupons</th>
+  <th>Number Viewed</th>
+  <th>Number Clipped</th>
+  <th>Number Printed</th>
+  </tr>
+  <tr class="even">
+    <td><%= (@account.coupon_templates.blank?) ? "0" : @account.coupon_templates.length %></td>
+    <td><%= (@account.coupon_templates.blank?) ? "0" : @account.coupon_templates.available.length %></td>
+    <td><%= (@account.coupons_viewed.blank?) ? "0" : @account.coupons_viewed.length %></td>
+    <td><%= (@account.coupons_clipped.blank?) ? "0" : @account.coupons_clipped.length %></td>
+    <td><%= (@account.coupons_printed.blank?) ? "0" : @account.coupons_printed.length %></td>
+  </tr>
+</table>
+</div>
+<p>
+<%= link_to 'Add Another Location', new_account_business_path(@account)%> |  
+<%= link_to 'Manage Coupon Templates and Coupons', account_coupon_templates_path(@account) %> 
+</p>
+
+

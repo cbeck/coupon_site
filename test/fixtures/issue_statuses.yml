@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+open:
+  name: Open
+
+resolved:
+  name: Resolved
+  
+flagged:
+  name: Flagged
+
+new:
+  name: New

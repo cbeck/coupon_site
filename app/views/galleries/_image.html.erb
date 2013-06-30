@@ -1,0 +1,15 @@
+<% fields_for "gallery[data][image][]", image do |f| -%>
+	<div class="admin_sub_form margin_bottom_6">
+		<% unless image.new_record? -%>
+			<%= remove_item_link('image', image, 'remove_image') %> <%= medium_link(image)%>			
+		<% else -%>
+		<h5>Upload A New Image</h5>			
+			<p class="margin_top_10 clear_fix">
+      Upload: <%= f.file_field :image_file %><br/>
+      <strong>or</strong> URL to the image: <%= f.text_field :image_file_url %>
+			<%= existing_field_id(f, image) %>			
+			</p>
+			<%= remove_item_link('image', image, 'remove_image') %> 
+		<% end -%>
+	</div>
+<% end -%>

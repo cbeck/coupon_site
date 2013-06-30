@@ -1,0 +1,18 @@
+<p>
+  <b>Affiliate:</b>
+  <%=h @affiliate_group_membership.affiliate_id %>
+</p>
+
+<p>
+  <b>Affilitate group:</b>
+  <%=h @affiliate_group_membership.affiliate_group_id %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%=h @affiliate_group_membership.active %>
+</p>
+
+
+<%= link_to 'Edit', edit_affiliate_group_membership_path(@affiliate_group_membership) %> |
+<%= link_to 'Back', affiliate_group_memberships_path %>

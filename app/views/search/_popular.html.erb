@@ -1,0 +1,13 @@
+<div id="home_tabs" class="tab_set_2">
+  <div id="home_tab_content">
+  <h3>Browse our most popular coupons</h3>
+    <% CouponTemplate.most_recent.in_groups_of(7, false) do |coupon_template_slice| %>
+      <%= render :partial => 'shared/coupon_templates', :object => coupon_template_slice %>
+    <% end %>    
+  </div>
+  <ul id="home_secondary_nav">
+    <li><%=link_to_remote 'Recently Added Coupons', :url => change_home_search_path(:to => "recent"), :method => :get %></li>
+    <li class="active">Most Popular Coupons</li>
+    <%= render :partial => "categories" %>
+  </ul>
+</div>

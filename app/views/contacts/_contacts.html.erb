@@ -1,0 +1,18 @@
+<table id="items" class="data">
+  <tr>
+    <th></th>
+    <th><%= image_tag('flag_blue.png')%></th>
+    <th width="200">Name</th>    
+    <th width="300">Email</th>
+    <th width="200">Contact issue</th>
+		<th width="100">When</th>
+  </tr>
+
+<% unless @contacts.blank? %>
+  <%= render :partial => @contacts %>
+<% else %>
+  <tr><td colspan="6">You have no messages that meet this criteria.</td></tr>
+<% end %>
+</table>
+
+<%= will_paginate @contacts %>

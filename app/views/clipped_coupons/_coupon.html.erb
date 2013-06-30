@@ -1,0 +1,21 @@
+<% hide_name ||= false %>
+<div class="coupon large space_out">
+  <table id="<%=dom_id(coupon)%>" class="single_coupon">
+   <tr>
+   <td class="coupon_logo">
+     <% unless coupon.logo.blank? %>
+       <%= small_link coupon.logo %>
+     <% else %>
+     <p class="coupon_business_name"><%= coupon.business.name %></p>
+     <% end %>
+   </td>
+   <td class="coupon_info"><%= render :partial => "coupons/coupon_item", :object => coupon, :locals=>{:hide_name => hide_name} %></td>
+   <td class="clip_art"><%= small_link coupon.clip_art unless coupon.clip_art.blank? %></td>
+   </tr>
+   <tr>
+     <td colspan="2"><%= render_coupon_info(coupon) %></td>
+     <td class="print_logo"><%= small_link Gallery.current_logo unless Gallery.current_logo.blank? %></td>
+   </tr>
+  </table>
+
+</div>

@@ -1,0 +1,25 @@
+<% @title = "New Coupon Template" %>
+
+<% form_for([@account, @coupon_template]) do |f| %>
+  <%= f.error_messages %>
+
+  <%= render :partial => "form", :object => f %>
+  
+ <div class="admin_form">
+ <h2 class="clear_fix">Assign to the Following Locations</h2> 
+  <ul>
+  <% @account.businesses.each do |business| %>
+    <li>
+      <%= check_box_tag("business_ids[]", business.id, @coupon_template.businesses.include?(business)) %>
+      <%= "#{business.name} (#{business.location.address(true)})" %> 
+    </li>
+  <% end %>
+  </ul>
+  </div>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+  <%= hidden_field_tag(:old_coupon_template, @old_coupon_template.id) if @old_coupon_template %>
+<% end %>
+
+<%= link_to 'Cancel and go back to coupon list', account_coupon_templates_path(@account) %>

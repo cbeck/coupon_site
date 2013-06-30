@@ -1,0 +1,88 @@
+<% coupon_template_id = (@coupon_template.new_record?) ? -1 : @coupon_template.id %>
+<div class="admin_form">
+<h2>Basic Coupon Information</h2>
+<p>
+  <%= form.label :name %><br />
+  <%= form.text_field :name %>
+</p>
+<p>
+  <%= form.check_box :enabled %> <%= form.label :enabled, "Coupon is enabled" %>  
+</p>
+
+<p>
+  <%= form.label :offer_id %><br />
+  <%= form.collection_select(:offer_id, @offers, :id, :name, {:include_blank => true}, {:onchange => remote_function(:url => offer_inputs_account_coupon_template_path(@account, coupon_template_id), 
+        :with => "'offer_id=' + this.value", 
+        :complete => "new Effect.Highlight('offer_inputs')")})%>
+</p>
+<div id="offer_inputs">
+ <%= render :partial => "offer_inputs", :locals => {:offer => @coupon_template.offer, :offer_values => @coupon_template.offer_values} unless @coupon_template.offer_values.blank? %>
+</div>
+
+<p>
+  <%= form.label :start_on %><br />
+  <%= form.calendar_date_select :start_on %>
+</p>
+<p>
+  <%= form.label :expired_on %><br />
+  <%= form.calendar_date_select :expired_on %><br/>
+  The maximum number of days a coupon may be active is <%= SiteConfig[:maximum_coupon_days] %>.
+</p>
+
+</div>
+
+<div class="admin_form">
+  <h2>Coupon Limitations</h2>
+  <h4>Current Limitations <%=add_item_link :coupon_limitations, 'coupon_limitation', CouponLimitation.new, 'limitation' %></h4>
+  <div id="current_limitations">
+    <% unless @coupon_template.coupon_limitations.blank? %>    
+	  <p>The following standard limitations are imposed on this coupon:</p>
+	  <% else %>
+	  <p>This coupon has no standard limitations.</p>
+	  <% end %>
+	</div>
+	
+	<div id="coupon_limitations">
+		<%= render :partial => 'coupon_limitation', :collection => @coupon_template.coupon_limitations %>
+	</div>
+	<div class="margin_top_10">
+  <p>
+    <%= form.check_box :has_custom_limitation %> <%= form.label :has_custom_limitation, "Use Custom Limitation" %>  <br/>
+    <%= form.text_field :custom_limitation %>
+  </p>
+  </div>
+</div>
+
+<div class="admin_form">
+<h2>Display On Coupon</h2>
+<p class="special_instructions"><%= form.check_box :use_primary %> <%= form.label :use_primary, "Use Primary Location Info on Coupon" %><br/>
+  <span class="helpful">Selecting this box will allow the coupon to show the address, email, website and phone (if selected below) that is associated with the PRIMARY LOCATION for this account, despite any information associated with this particular location.</span>
+</p>
+<p>
+  <%= form.check_box :show_location %> <%= form.label :show_location %>
+  <br/>
+  <%= form.check_box :show_email %> <%= form.label :show_email %>
+  <br/>
+  <%= form.check_box :show_website %> <%= form.label :show_website %>
+  <br/>
+  <%= form.check_box :show_phone %> <%= form.label :show_phone %>
+</p>
+<h4>Additional Information <%=add_item_link :info_boxes, 'info_box', InfoBox.new, 'info_box' %></h4>
+<div id="info_boxes">
+	<%= render :partial => 'info_box', :collection => @coupon_template.info_boxes %>
+</div>
+</div>
+
+<div class="admin_form">
+  <h2>Coupon Clip-Art</h2>
+  <div id="image_selector">
+    <%= render :partial => "gallery", :collection => Gallery.available.photos %>
+    <%= render :partial => "gallery", :object => @account.photos %>
+  </div>
+</div>
+<%= form.hidden_field :image_id %>
+<%= form.hidden_field :account_id %>
+
+<script type="text/javascript">
+	<%= "Application.makeActive('#{dom_id(@coupon_template.image)}');" unless @coupon_template.image.blank? %>
+</script>

@@ -1,0 +1,42 @@
+<% @title = "Manage Ad Placements #{link_to image_tag('add.png'), new_ad_placement_path, :title => 'New ad placement'}" %>
+
+<%= render :partial => "shared/admin_menu" %>
+<p>Ad placements determine where ads will be seen on the site. To view or create ads for placement, <%= link_to 'go here', ads_path %>.</p>
+
+<table class="data">
+  <tr>
+    <th></th>
+    <th>Location</th>
+    <th>Ad</th>
+    <th>Affiliate Group</th>
+    <th>Ad Enabled</th>
+  </tr>
+
+<% @ad_placements.each do |ad_placement| %>
+  <% menu_id = "item_menu_#{ad_placement.id}" %>
+  <tr onmouseover="$('<%=menu_id%>').style.visibility='visible'" 
+      	  onmouseout="$('<%=menu_id%>').style.visibility='hidden'" class="<%= cycle("odd", "even") -%>" id="<%=dom_id(ad_placement)%>">
+    <td>  <div id="<%=menu_id%>" class="item_menu">
+  		<%= link_to(image_tag('bin.png', :title=>"Delete this placement"), ad_placement, 
+  				:confirm => "This will permanently remove this ad placement from our system. This cannot be undone. Are you sure you want to do this?", 
+					:method => :delete) %>
+  	  <%= link_to image_tag('pencil.png', :title=>"Edit this placement"), 
+  					edit_ad_placement_path(ad_placement) %>
+  	  </div>
+  	</td>
+    <td><%= link_to ad_placement.ad_block.location, ad_placement %></td>
+    <td><%= link_to ad_placement.ad.name, ad_placement.ad %></td>
+    <td><%= render_affiliate_group(ad_placement) %></td>
+    <td><%= render_ad_status ad_placement.ad %></td>
+  </tr>
+<% end %>
+<% if @ad_placements.blank? %>
+  <tr><td colspan="3">There are no ads placed on the site currently.</td></tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ad Placement', new_ad_placement_path %> | <%= link_to 'Manage Ads', ads_path %>
+
+<div class="clear_fix"></div>

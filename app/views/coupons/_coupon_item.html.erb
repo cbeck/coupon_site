@@ -1,0 +1,15 @@
+<% hide_name ||= false %>
+<% unless coupon_item.blank? %>
+<% unless hide_name %>
+  <% if coupon_item.business.logo? %>
+    <%= mini_link(coupon_item.business.logo) %>
+  <% else %>
+  <p class="coupon_business_name"><%= coupon_item.business.name %></p>
+  <% end %>
+<% end %>
+<p class="coupon_name"><%= coupon_item.name %></p>
+<p class="coupon_offer"><%= render_offer(coupon_item.coupon_template.offer, coupon_item.coupon_template.offer_values) %></p>
+<p class="coupon_limit"><%= coupon_item.limit %></p>
+<p class="coupon_expiration">Offer expires <%= coupon_item.coupon_template.expired_on %></p>
+
+<% end %>

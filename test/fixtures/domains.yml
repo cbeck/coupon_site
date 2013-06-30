@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  url: MyString
+  theme_name: default
+  affiliate_group: affiliate_a
+
+two:
+  url: MyString
+  theme_name: default
+  affiliate_group: affiliate_b

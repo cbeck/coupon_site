@@ -1,0 +1,19 @@
+<% @title = "Available Reports" %>
+
+<%= render :partial => "shared/admin_menu"%>
+
+<h3>Business Reports</h3>
+<ul>
+  <li><%= link_to "No Active Coupons Report", no_active_coupons_report_path %></li>
+</ul>
+
+<h3>Coupon Reports</h3>
+<ul>
+  <li><%= link_to "Expiring Coupons Report", expiring_coupons_report_path %></li>  
+  <li><%= link_to "Expired Coupons Report", expired_coupons_report_path %></li>  
+  <li><%= link_to "Viewed/Clipped/Printed Coupons Report", basic_coupons_report_path %></li>
+  <li><%= link_to "No Redemptions Report", no_redemptions_report_path %></li>
+  <li><%= link_to "High Redemptions Report", high_redemptions_report_path %></li>
+</ul>
+
+<div class="clear_fix"></div>

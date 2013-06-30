@@ -1,0 +1,25 @@
+<% @title = "Edit #{@ad.name}" %>
+
+
+<% form_for(@ad) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :click_url %><br />
+    <%= f.text_field :click_url %>
+  </p>
+  <p>
+    <%= f.label :enabled %><br />
+    <%= f.check_box :enabled %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Cancel editing and view this ad', @ad %> |
+<%= link_to 'Cancel editing and go back to ad list', ads_path %>

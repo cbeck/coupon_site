@@ -1,0 +1,36 @@
+<% @title = "#{@gallery.name} Gallery"%>
+
+<p>
+  <b>Description:</b>
+  <%=h @gallery.description %>
+</p>
+
+<div class="form-outer" id="media">
+  <h4>Gallery Images <%=add_item_link :form, 'image', Image.new, 'image', 'submit'%></h4> 
+	<div class="form">
+	  <% form_for @gallery, :html => { :multipart => true } do |f| %>
+		<div id="form"></div>
+		<p style="display:none;" id="submit"><%= submit_tag "Add Image" %></p>
+		<% end %>			
+	</div>
+	<div class="gallery_images">
+	  <p>You can re-order your images by dragging them up and down in the list. The order will be automatically saved.</p>
+		<ul id="images">
+			<% @gallery.images.each do |image| %>
+			<li id="image_<%=image.id%>" class="margin_bottom_6">
+				<%= render :partial => 'image', :object => image %>
+			</li>
+			<% end -%>
+		</ul>
+	</div>
+</div>
+
+
+<%= sortable_element 'images',
+:url => { :action => "sort_images" , :id => @gallery.id },
+:complete => visual_effect(:highlight, 'images')
+%>
+
+
+<%= link_to 'Edit this gallery info', edit_gallery_path(@gallery) %> |
+<%= link_to 'Back to galleries list', galleries_path %>

@@ -1,0 +1,29 @@
+<div id="search_form">
+  <div id="search_fields">
+    <% form_for :search, @search, 
+  		:url => { :action => 'create', :controller => 'search'} do |f| %>
+  	<div id="search_what">
+  	  <p class="search_label">What are you looking for?</p>
+  	  <p class="search_field">
+  	    <%= text_field_with_auto_complete :search, :query, :autocomplete => "off", :controller => "search" %>
+  	  </p>	
+  	</div>
+  	<div id="search_where">
+  	  <p class="search_label">Where are you looking?</p>
+  	  <p class="search_field">
+  	    <%= f.text_field :location %>
+				<%= f.hidden_field :radius %>
+				<%= f.hidden_field :pagesize %>
+  	  </p>
+  	</div>	
+  	<div id="search_submit">
+  	  <%= image_submit_tag("/themes/#{@current_theme}/images/btn_search.png") %>
+  	</div>
+    <% end %>
+  </div>
+
+	<div style="margin: 0 2em; font-size: 0.8em;">
+		<%=link_to "browse by category", browse_path %>
+	</div>
+
+</div>

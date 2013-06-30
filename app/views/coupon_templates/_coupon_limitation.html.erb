@@ -1,0 +1,8 @@
+<% fields_for "coupon_template[data][coupon_limitation][]", coupon_limitation do |f| -%>
+	<div class="limit">
+	  <% id = coupon_limitation.limitation.id unless coupon_limitation.limitation.blank? %>
+		<%= select_tag "coupon_template[data][coupon_limitation][]limitation_id", options_from_collection_for_select(@limitations, :id, :name, id) %>
+		<%= remove_item_link('coupon_limitation', coupon_limitation, 'remove_coupon_limitation') %>
+		<%= existing_field_id(f, coupon_limitation) %>
+	</div>
+<% end -%>

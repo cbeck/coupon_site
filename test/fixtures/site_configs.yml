@@ -1,0 +1,21 @@
+
+radius:
+  name: search_radius
+  value: 30
+
+zoom:
+  name: initial_map_zoom
+  value: 11
+
+coup_per_page:
+  name: coupons_per_page
+  value: 30
+
+busn_per_page:
+  name: businesses_per_page
+  value: 10
+
+max_days:
+  name: maximum_coupon_days
+  value: 120
+

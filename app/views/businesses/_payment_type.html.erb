@@ -1,0 +1,5 @@
+<div class="payment_type">
+	<label><%=payment_type.name %></label>
+	<%=check_box_tag "business[data][payment_type][]", payment_type.id, 
+			selected.include?(payment_type.id) %>
+</div>

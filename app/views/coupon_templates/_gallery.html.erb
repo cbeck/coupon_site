@@ -1,0 +1,17 @@
+<% 
+  if gallery.respond_to?('name')
+    name = gallery.name
+    images = gallery.images
+  else
+    name = "Account Photos"
+    images = gallery
+  end  
+%>
+<% unless images.blank? %>
+<h3 class="clear_fix"><%= name %></h3>
+<ul>
+  <%= render :partial => 'image', :collection => images %>
+</ul>
+<div class="clear_fix"></div>
+<% end %>
+  

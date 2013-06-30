@@ -1,0 +1,24 @@
+<% @title = "Ad Placement"%>
+<p>
+  <b>Location:</b>
+  <%=h @ad_placement.ad_block.location %>
+</p>
+
+<p>
+  <b>Ad:</b>
+  <%=h @ad_placement.ad.name %>
+</p>
+
+<p>
+  <b>Affiliate Group:</b>
+  <%= render_affiliate_group(@ad_placement) %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @ad_placement.position %>
+</p>
+
+<%= link_to 'Edit this placement', edit_ad_placement_path(@ad_placement) %> |
+<%= link_to 'All ad placements', ad_placements_path %> | 
+<%= link_to 'Edit this ad', edit_ad_path(@ad_placement.ad) %>

@@ -1,0 +1,19 @@
+<div id="home_tabs" class="tab_set_1">
+  <div id="home_tab_content">
+  
+    
+  <h3>Browse our most recent coupons
+    <div class="share inline"> 
+      <script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#publisher=d391baeb-b669-4a19-89bb-1cf8c9b969f3&amp;type=website&amp;style=rotate"></script>
+    </div>
+  </h3>
+    <% CouponTemplate.most_recent_accounts.in_groups_of(7, false) do |account_slice| %>
+      <%= render :partial => 'shared/accounts', :object => account_slice %>
+    <% end %>    
+  </div>
+  <ul id="home_secondary_nav">
+    <li class="active">Recently Added Coupons</li>
+    <li><%=link_to_remote 'Most Popular Coupons', :url => change_home_search_path(:to => "popular"), :method => :get %></li>
+    <%= render :partial => "categories" %>
+  </ul>
+</div>

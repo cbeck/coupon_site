@@ -1,0 +1,2 @@
+page.replace_html "#{dom_id(@contact)}", :partial => "contact_inner", :locals => {:contact => @contact}
+page.visual_effect(:highlight, "#{dom_id(@contact)}")

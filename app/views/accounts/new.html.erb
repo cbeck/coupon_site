@@ -1,0 +1,31 @@
+<h1>New Business Account</h1>
+
+<% form_for(@account) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :billing_name %><br />
+    <%= f.text_field :billing_name %>
+  </p>
+  <p>
+    <%= f.label :internal_identifier %><br />
+    <%= f.text_field :internal_identifier %>
+  </p>
+  <p>
+     <%= f.label :affiliate_id %><br/>
+     <%= f.collection_select :affiliate_id, Affiliate.all, :id, :name, {:prompt => true} %>
+   </p>
+  <p>
+    <%= f.label :initial_popular_category %><br/>
+    <%= select_tag "account[data][tag][][name]", options_for_select(SiteConfig['popular_categories'].to_sorted_array) %>
+  </p> 
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', accounts_path %>

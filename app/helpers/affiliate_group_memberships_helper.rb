@@ -1,0 +1,4 @@
+module AffiliateGroupMembershipsHelper
+  
+  
+end

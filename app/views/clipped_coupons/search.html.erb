@@ -1,0 +1,19 @@
+
+
+<h1>Clipped Coupons Search Results</h1>
+
+<% if @clipped_coupons.empty? %>
+ <p>No results matched '<%= @search %>'</p>
+<% else %>
+<div id="page_menu">
+  <% form_tag search_user_clipped_coupons_path(current_user), :method => 'get' do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+    <%= link_to image_tag("cancel.png", :title=>"Clear Search"), user_clipped_coupons_path(current_user)%>
+  <% end %>
+</div>
+<ul>
+<%= render :partial => @clipped_coupons %>
+</ul>
+<p class="clearfix">&nbsp;</p>
+<% end %>

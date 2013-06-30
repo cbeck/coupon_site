@@ -1,0 +1,65 @@
+<% content_for("page_css") do -%>
+<style type="text/css">
+	form label {
+		width: 170px;
+		margin-right: 1em;
+		padding-bottom: 1em;
+		display: block;
+		float: left;
+	}
+	form p {
+		padding: 1em 0 0;
+		clear: left;
+	}
+	form textarea {
+		clear: left;
+		display: block;
+		margin-top: 0.5em;
+	}
+</style>
+<% end -%>
+
+<h4 class="regular">Contact Us</h4>
+
+<div id="details_container">
+    <div id="text_container">
+      <div id="text_container_top">
+        <div id="text_container_inner">
+
+<%= render :partial => "contact_text"%>
+
+<p>We would love to hear from you.</p>
+<p>For your convenience, you may use the form below to let us know the type of issue
+	you are telling us about, and provide any necessary details if you are reporting a problem
+	with the site.</p>
+
+<% form_for(@contact) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :email, 'Email address' %>
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :contact_issue_id, 'What type of issue are you contacting us about today?' %>
+    <%= f.select 'contact_issue_id', ContactIssue.all.collect{|c| [c.name, c.id]} %>
+  </p>
+  <p>
+    <%= f.label :comments, 'Additional info or comments' %><br/>
+    <%= f.text_area :comments, :cols => 60, :rows => 10 %>
+  </p>
+  <p>
+    <%= f.submit 'Send' %>
+  </p>
+<% end %>
+
+        <div class="clear_fix">&nbsp;</div>   
+        </div>
+      </div>
+    </div>
+    <div class="clear_fix">&nbsp;</div>    
+</div>

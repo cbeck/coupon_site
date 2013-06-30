@@ -1,0 +1,38 @@
+<% @title = "Ad Management #{link_to image_tag('add.png'), new_ad_path, :title => 'Add new advertisement'}" %>
+
+<%= render :partial => "shared/admin_menu"%>
+<p>These ads are available for placement on the site. To place a listed ad on a page within the site, <%= link_to 'go here', ad_placements_path %>.</p>
+<table class="data">
+  <tr>
+    <th></th>
+    <th>Name</th>
+    <th>Click url</th>
+    <th>Enabled</th>
+  </tr>
+
+<% @ads.each do |ad| %>
+  <% menu_id = "item_menu_#{ad.id}" %>
+  <tr onmouseover="$('<%=menu_id%>').style.visibility='visible'" 
+    	  onmouseout="$('<%=menu_id%>').style.visibility='hidden'" class="<%= cycle("odd", "even") -%>" id="<%=dom_id(ad)%>">
+    	<td>  <div id="<%=menu_id%>" class="item_menu">
+    		<%= link_to(image_tag('bin.png', :title=>"Delete #{ad.name}"), ad, 
+    				:confirm => "This will permanently delete all information for #{ad.name} from our system. This cannot be undone. Are you sure you want to do this?", 
+  					:method => :delete) %>
+    	  <%= link_to image_tag('pencil.png', :title=>"Edit #{ad.name}"), 
+    					edit_ad_path(ad) %>
+    	  </div>
+    	</td>
+    <td><%= link_to ad.name, ad %></td>
+    <td><%=h ad.click_url %></td>
+    <td><%= render_ad_status(ad) %></td>
+  </tr>
+<% end %>
+<% if @ads.blank? %>
+  <tr><td colspan="3">There are no ads currently available.</td></tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ad', new_ad_path %> | <%= link_to 'Manage Ad Placements', ad_placements_path %>
+<div class="clear_fix"></div>

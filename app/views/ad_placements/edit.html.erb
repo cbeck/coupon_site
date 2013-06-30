@@ -1,0 +1,28 @@
+<% @title = "Editing an Ad Placement" %>
+
+<% form_for(@ad_placement) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :ad_block_id, "Ad Location" %><br />
+    <%= f.collection_select :ad_block_id, AdBlock.all, :id, :location, {:prompt => true} %>
+  </p>
+  <p>
+    <%= f.label :ad_id, "Ad" %><br />
+    <%= f.collection_select :ad_id, Ad.all, :id, :name, {:prompt => true} %>
+  </p>
+  <p>
+    <%= f.label :affiliate_group_id %><br />
+    <%= f.collection_select :affiliate_group_id, AffiliateGroup.all, :id, :name, {:prompt => "ALL"} %>
+  </p>
+  <p>
+    <%= f.label :position %><br />
+    <%= f.text_field :position %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @ad_placement %> |
+<%= link_to 'Back', ad_placements_path %>

@@ -1,0 +1,30 @@
+<% show ||= false %>
+<% if show %>
+  <tr class="<%= cycle("odd", "even")%>">
+<% else %>
+  <% menu_id = "item_menu_#{business.id}" %>
+  <tr onmouseover="$('<%=menu_id%>').style.visibility='visible'" 
+  	  onmouseout="$('<%=menu_id%>').style.visibility='hidden'" class="<%= cycle("odd", "even") -%>" id="<%=dom_id(business)%>">
+  	<td>  <div id="<%=menu_id%>" class="item_menu">
+  		<%= link_to(image_tag('bin.png', :title=>"Delete #{business.name}"), [@account, business], 
+  				:confirm => "This will permanently delete all information for #{business.name} from our system. This cannot be undone. Are you sure you want to do this?", 
+					:method => :delete) if current_user.sysadmin? %>
+  	  <%= link_to image_tag('pencil.png', :title=>"Edit #{business.name}"), 
+  					edit_account_business_path(@account, business) %>
+  	  </div>
+  	</td>
+<% end %>
+	<td>
+	  <% path = (show) ? details_account_business_path(@account, business) : account_business_path(@account, business) %>
+		<%
+			@index ||= -1
+			@index += 1
+		%>
+	  <span class="pinpoint"><%=(?A+@index).chr %></span>
+	  <%=link_to h(business.name), path %>
+		<% # I ain't touch'n your style sheet unless I have too  :-)  '%>
+		<%= "<br/><div style='float:right; font-style: italic; font-size: 0.7em; margin-top: 2px;'>Primary Location</div>" if business.primary? && !show %>
+	</td>
+	<td><%=render(:partial => '/businesses/location', :object => business.location)%></td>
+	<td><%=business.phones.first%></td>
+</tr>

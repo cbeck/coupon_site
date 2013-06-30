@@ -1,0 +1,46 @@
+<% @title = "My Account #{link_to(image_tag('pencil.png'), edit_user_path(current_user), :title => 'Edit my information')}"%>
+<div id="user_info">
+
+<p>We have your email address as <%=@user.email%>. If this is not correct, <%= link_to "fix it here", edit_user_path(current_user) %>.</p>
+	
+	<% unless @user.location.nil? %>
+	<h3>Your Location</h3>
+	<p>
+		<% unless @user.location.city.blank? %>
+			<%= @user.location.address_line1 %><br/>
+			<%= @user.location.city %>, <%= @user.location.state %>  <%= @user.location.postal_code %><br/>
+		<% else %>
+			<%= @user.location.postal_code %><br/>
+		<% end %>
+	</p>
+	<% else %>
+	<p>You are located in	<%= @user.zip %>.</p>
+	<% end %>
+
+	<% unless @user.email2.blank? && @user.email3.blank? %>
+	<h3>Extra email addresses</h3>
+		<%= @user.email2 %><br/>
+		<%= @user.email3 %>
+	<% end %>
+
+</div>
+
+<h3 class="margin_top_10">My Expiring Coupons</h3>
+<% unless @expiring_coupons.blank? %>
+  <ul>
+  <%= render :partial => 'clipped_coupons/clipped_coupon', :collection => @expiring_coupons %>
+  </ul>
+<% else %>
+  <p>You have no coupons expiring.</p>
+<% end %>
+
+<h3 class="clearfix">My Recently Clipped Coupons</h3>
+<% unless @recently_clipped.blank? %>
+  <ul>
+  <%= render :partial => 'clipped_coupons/clipped_coupon', :collection => @recently_clipped %>
+  </ul>
+<% else %>
+  <p>You have not clipped any coupons yet. Visual design will drive some sort of demo item here.</p>
+<% end %>
+
+<div class="clear_fix"></div>

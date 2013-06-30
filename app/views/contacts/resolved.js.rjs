@@ -1,0 +1,2 @@
+page[:contact_list].replace_html :partial => 'contacts' , :object => @contacts
+page[:page_menu].replace_html :partial => 'tabs', :locals => {:resolved => true}

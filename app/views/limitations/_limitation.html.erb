@@ -1,0 +1,14 @@
+<% prefix ||= "" %>
+<% menu_id = "#{prefix}item_menu_#{limitation.id}" %>
+  <tr onmouseover="$('<%=menu_id%>').style.visibility='visible'" 
+  	  onmouseout="$('<%=menu_id%>').style.visibility='hidden'" class="<%= cycle("odd", "even") -%>" id="<%=dom_id(limitation)%>">
+  	<td>  <div id="<%=menu_id%>" class="item_menu">
+  		<%= link_to(image_tag('bin.png', :title=>"Delete #{limitation.name}"), limitation, 
+  				:confirm => "This will permanently delete all information for #{limitation.name} from our system. This cannot be undone. Are you sure you want to do this?", 
+					:method => :delete) %>
+  	  <%= link_to image_tag('pencil.png', :title=>"Edit #{limitation.name}"), 
+  					edit_limitation_path(limitation) %>
+  	  </div>
+  	</td>
+    <td><%= link_to limitation.name, limitation %></td>    
+</tr>

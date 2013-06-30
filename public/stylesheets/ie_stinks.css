@@ -1,0 +1,7 @@
+#search_new #search_container { top:-13px;}
+#header_bottom_container { margin-top: 38px;}
+
+#admin_menu {float: none;}
+#admin_menu.wide {width:260px;}
+#admin_menu li {float:left; margin-right: 20px;}
+#admin_menu.wide li {float:none;}

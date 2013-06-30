@@ -1,0 +1,1 @@
+page[:offer_inputs].replace_html :partial => 'offer_inputs' , :locals => {:offer => @offer, :offer_values => @offer_values}

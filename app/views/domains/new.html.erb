@@ -1,0 +1,11 @@
+<% @title = "New domain" %>
+
+<% form_for(@domain) do |f| %>
+  <%= f.error_messages %>
+  <%= render :partial => "form", :object => f %>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Cancel and go back to domains list', domains_path %>

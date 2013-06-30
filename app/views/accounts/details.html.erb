@@ -1,0 +1,58 @@
+<%= render :partial => "shared/large_coupon_css"%>
+<% unless @account.businesses.blank? -%>
+	<%=render :partial => 'accounts/googlemap' %>
+<% end -%>
+
+<div class="right share margin_top_10"> 
+  <script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#publisher=d391baeb-b669-4a19-89bb-1cf8c9b969f3&amp;type=website&amp;style=rotate"></script>
+</div>
+<h4 class="regular">Available Coupons for <%=h @account.name %></h4>
+
+<div id="details_container">
+  <div id="business_details">
+    
+  </div>
+  <div id="mini_coupons_container">
+    <div id="mini_coupons_top">
+      <div class="half_span large">
+        <div id="mini_coupons" class="half">
+           <% unless @account.coupon_templates.available.blank? %>
+            <ul>
+              <%= render :partial => "coupon_template", :collection => @account.coupon_templates.available, :locals => {:cycle_2 => true} %>
+            </ul>
+          <% else %>
+            <p><%= @account.name %> is not currently offering any coupons. Check back soon!</p>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="half_span last">
+        <% if @account.primary_business? && google_maps?(@account.primary_business.location) -%>
+        <div class="map_with_logo big">
+        	<div id="map" class="big"></div>
+        	<div class="account_description"><%= @account.description %></div>
+      		<% if @account.logo? %>
+      		  <div class="business_logo"><%= small_link @account.logo %></div>
+      		<% end %>      		
+      	</div>
+        <% end -%>
+        <table id="items" class="results">
+        	<tr>
+        	  <th>Name</th>
+        		<th>Location</th>
+        		<th>Phone</th>
+        	</tr>
+        	<%= render :partial => "/businesses/business", :collection => @account.businesses, :locals => {:show => true} %>
+        </table>			
+      </div>
+      
+      <div class="clear_fix">&nbsp;</div>
+    </div>
+  </div>
+  <div class="clear_fix">&nbsp;</div>
+</div>
+
+
+
+
+

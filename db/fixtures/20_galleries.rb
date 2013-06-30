@@ -1,0 +1,2 @@
+Gallery.create :name => 'Logos', :description => 'Carolina Coupon logos for use on coupons. The default logo, or the one to be shown on all coupons, should be first in the list. Drag images to re-order them.', :has_logos => true, :enabled => true
+Gallery.create :name => 'General', :description => 'General Clip-art for use on coupons', :enabled => true

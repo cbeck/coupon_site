@@ -1,0 +1,35 @@
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Carolina Moneysaver</title>
+	<style type="text/css">
+		body {
+			background-color: #111;
+			color: #ccc;
+		}
+		#canvas {
+			width: 380px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		#canvas h1 {
+			margin: 50px 0 100px;
+			color: #004E80;
+		}
+	</style>
+</head>
+<body>
+
+<div id="canvas">
+	<h1>Carolina Moneysaver</h1>
+
+	<% form_for :site, :url => site_login_path do |f| %>
+		
+		<p>Yo! Who's there?<br/>Gimme the code or there'll be trouble.</p>
+		<%= f.text_field :password, :size => 16 %>
+	
+		<%= submit_tag "Go" %>
+	<% end %>
+</div>
+
+</body>
+</html>

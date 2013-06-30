@@ -1,0 +1,42 @@
+<% clipped_coupon ||= nil %>
+<div id="coupon_container">
+  <div class="coupon large">
+    <table id="<%=dom_id(coupon)%>" class="single_coupon">
+     <tr>
+     <td class="coupon_logo">  
+        <% unless coupon.logo.blank? %>
+          <%= small_link coupon.logo %>
+        <% else %>
+        <p class="coupon_business_name"><%= coupon.business.name %></p>
+        <% end %>
+     </td>
+     <td class="coupon_info"><%= render :partial => "coupons/coupon_item", :object => coupon, :locals => {:hide_name =>  true} %></td>
+     <td class="clip_art"><%= small_link coupon.clip_art unless coupon.clip_art.blank? %></td>
+     </tr>
+     <tr>
+       <td colspan="2"><%= render_coupon_info(coupon) %></td>
+       <td class="print_logo"><%= render_site_logo(@current_domain) %></td>
+     </tr>
+    </table>
+
+  </div>
+  <div class="coupon_buttons">
+    <div class="coupon_action">
+      <% if logged_in? %>
+        <% if clipped_coupon %>
+          <%= link_to image_tag('icons/delete.png', :title=>"Remove this coupon"), [current_user, clipped_coupon], :method => :delete %>
+          <%= link_to "Trash", [current_user, clipped_coupon], :method => :delete %>
+        <% else %>
+          <%= link_to_remote(image_tag('icons/clip.png'), :url => user_clipped_coupons_path(current_user, :coupon_id => coupon))%>
+          <%= link_to_remote "Clip", :url => user_clipped_coupons_path(current_user, :coupon_id => coupon) %>
+        <% end %>
+      <% else %>        
+        <%= link_to(image_tag('icons/clip.png'), signup_path(:coupon_id => coupon))%>
+        <%= link_to "Clip", signup_path(:coupon_id => coupon) %>        
+      <% end %>
+    </div>
+    <% path = (@print) ? "javascript:window.print();" : coupon_path(coupon) %>
+    <div class="coupon_action last"><%= link_to(image_tag('icons/print.png'), path) %> <%= link_to "Print", path %></div>
+  </div>
+</div>
+

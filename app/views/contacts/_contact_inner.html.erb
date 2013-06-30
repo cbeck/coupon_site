@@ -1,0 +1,7 @@
+<% contact ||= contact_inner %>
+<td><%= render_status_link(contact) %></td>
+<td><%= render_flag_link(contact)%></td>
+<td><%=link_to h(contact.name), contact %></td>
+<td><%=h contact.email %></td>
+<td><%=h contact.contact_issue.name %></td>
+<td><%=time_ago_in_words contact.created_at %> ago</td>

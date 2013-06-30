@@ -1,0 +1,53 @@
+<% content_for("page_scripts") do -%>
+<script type="text/javascript">
+	function toggleOpt() {
+		$('optional').toggle();
+	}
+</script>
+<% end %>
+
+<% @title = "Sign Up For Your FREE Account"%>
+
+<div id="user_info">
+  
+	<% @user.password = @user.password_confirmation = nil %>
+
+	<%= nested_error_messages_for :user %>
+	<% form_for :user, :url => users_path do |f| -%>
+		<p><%= label_tag 'email' %><br/>
+		<%= f.text_field :email, :size => 30 %></p>
+
+		<p><%= label_tag 'password' %><br/>
+		<%= f.password_field :password %></p>
+
+		<p><%= label_tag 'password_confirmation', 'Confirm Password' %><br/>
+		<%= f.password_field :password_confirmation %></p>
+
+		<p><%= label_tag 'zip' %><br/>
+		<%= f.text_field :zip, :size => 5 %></p>		
+
+		<p>Show optional fields: <input id="show_opt" type="checkbox" value="1" onclick="toggleOpt();" /></p>
+		
+		<div id="optional" style="display: none">
+			<h3>Location</h3>
+			<% f.fields_for :data do |data| -%>
+				<%=render :partial => '/businesses/location_form', :object => data, 
+						:locals => { :location => @user.location }%>
+			<% end -%>
+
+			<h3>Extra email addresses</h3>
+			<p><%= label_tag 'email2' %><br/>
+			<%= f.text_field :email2 %></p>		
+
+			<p><%= label_tag 'email3' %><br/>
+			<%= f.text_field :email3 %></p>		
+		</div>
+	  <% unless params[:coupon_id].blank? %>
+	    <%= hidden_field_tag :coupon_id, params[:coupon_id] %>
+	  <% end %>
+
+		<p><%= submit_tag 'Sign up' %></p>
+		<p><strong>Already Registered? <%= link_to "Login", login_path(:coupon_id => params[:coupon_id])%></strong></p>
+	<% end -%>
+</div>
+

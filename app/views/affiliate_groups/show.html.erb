@@ -1,0 +1,18 @@
+<% @title = @affiliate_group.name %>
+
+<div class="admin_form margin_top_10">
+  <h2>Basic Affiliate Group Info</h2>
+<p><b>ID:</b>
+<%= @affiliate_group.id %>
+
+<p>
+  <b>Description:</b>
+  <%=h @affiliate_group.description %>
+</p>
+
+
+</div>
+<%= link_to 'Edit this affiliate group', edit_affiliate_group_path(@affiliate_group) %> |
+<%= link_to 'View all affiliate groups', affiliate_groups_path %> | 
+<%= link_to 'Place an affiliate into this affiliate group', new_affiliate_group_membership_path(:affiliate_group_id => @affiliate_group.id)%>
+

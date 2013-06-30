@@ -1,0 +1,47 @@
+<h4 class="regular">Browse By Category</h4>
+
+<div id="details_container">
+  <div id="browse_details">    
+    <h3>You have selected...</h3>
+    <p id="breadcrumbs">
+  	<%=link_to @cat1.name.humanize, category1_path(@cat1)%>
+  	<%="&raquo; " + link_to(@cat2.name.humanize, category2_path(@cat1, @cat2)) unless @cat2.nil? %>
+  	<%="&raquo; " + link_to(@cat3.name.humanize, category3_path(@cat1, @cat2, @cat3)) unless @cat3.nil? %>
+  	<%= link_to image_tag("delete_24.png", :title=>"Clear categories and start again", :width => 16), browse_path%>
+  	</p>
+  
+  	<% unless @categories.empty? %> 
+  		<div id="categories">     
+        <h3>You can further refine your search here...</h3>
+        <ul>
+        <% @categories.each do |cat| %>
+        	<% if @tags.size == 1 %>
+        		<li><%=link_to cat.name.humanize, category2_path(@cat1, cat) %></li>
+        	<% elsif @tags.size == 2 %>
+        		<li><%=link_to cat.name.humanize, category3_path(@cat1, @cat2, cat) %></li>
+        	<% end %>
+        <% end %>
+        </ul>           
+      </div>  
+      <% end %>
+     <div class="clear_fix dot">&nbsp;</div>
+  </div>
+  <div id="mini_coupons_container">
+    <div id="mini_coupons_top">      
+      <div id="mini_coupons"> 
+        <h3 class="caps">Available coupons</h3>       
+        <% reset_cycle %>
+        <ul>
+        	<% @accounts.each do |acct| %>
+        	  <%= render :partial => "accounts/coupon_template", :collection => acct.coupon_templates.active, 
+									:locals => {:account => acct} %>
+        	<% end %>
+        </ul>
+      </div>
+      <div class="clear_fix">&nbsp;</div>
+    </div>
+  </div>
+  <div class="clear_fix">&nbsp;</div>
+</div>
+
+

@@ -1,0 +1,11 @@
+development:
+  morphology: stem_en
+#  min_prefix_len: 3
+
+# be sure port is different from other searchd on the production server
+production:
+  port: 3314
+  address: localhost
+  morphology: stem_en
+
+#  min_prefix_len: 3

@@ -1,0 +1,9 @@
+
+print:
+  name: print
+
+clip:
+  name: clip
+
+view:
+  name: view

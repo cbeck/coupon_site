@@ -1,0 +1,4 @@
+<% resolved ||= false %>
+
+<%= link_to_remote "Open", :url => contacts_path, :method => :get, :html => {:class => "#{(resolved) ? '' : 'active'}"}  %>
+<%= link_to_remote "Resolved", :url => resolved_contacts_path, :method => :get, :html => {:class => "#{(resolved) ? 'active' : ''}"}  %>

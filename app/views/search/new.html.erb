@@ -1,0 +1,35 @@
+<%= render :partial => "shared/large_coupon_css"%>
+<% content_for("header_text") do -%>
+  <div id="home_header_text">
+    <h4><%= SiteConfig[:home_header]%></h4>
+    <p><%= SiteConfig[:home_header_text]%></p>
+  </div>
+  <div id="piggy"><%= theme_image_tag('piggy.png')%></div>
+<% end -%>
+
+<div id="home_tab_container">
+  <%= render :partial => "recent"%>
+</div>
+
+<div id="ad_block" class="clear_fix">
+  <%= render_ads('home_footer_1')%>
+</div>
+
+<div class="clear_fix">&nbsp;</div>
+
+<% if logged_in? %>
+<div id="home_expiring_coupons">
+<h3>My Expiring Coupons</h3>
+  <% unless @expiring_coupons.blank? %>
+  <table id="clipped_coupons_table">
+  <% @expiring_coupons.in_groups_of(4, false) do |coupon_slice| %>
+    <tr>
+      <%= render :partial => "clipped_coupons/clipped_coupon", :collection => coupon_slice %>
+    </tr>
+  <% end %> 
+  </table>
+  <% else %>
+    <p>You have no coupons expiring.</p>
+  <% end %>
+<% end %>
+</div>

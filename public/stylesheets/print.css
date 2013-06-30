@@ -1,0 +1,15 @@
+div.hide, p.hide {
+	display:none;
+}
+
+body {background-color: #fff;}
+
+#print_details { border:none;}
+
+#coupons_show div#mini_coupons_container, #clipped_coupons_print div#mini_coupons_container { background-image: none;}
+
+div#mini_coupons_container div#mini_coupons_top, div#print_details, #canvas {border:none;}
+
+h4.hide { text-indent: -999px;}
+
+div.print_only, p.print_only {display:block;}

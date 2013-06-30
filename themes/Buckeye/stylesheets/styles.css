@@ -1,0 +1,46 @@
+body {
+  background-color: #c20727;
+}
+
+a {
+  color: #c20727;
+}
+
+a:hover {
+  color: #000;
+}
+
+#piggy {
+  bottom: -40px;
+}
+
+#header {
+  background: transparent url('/themes/Buckeye/images/bkg_head.png') repeat-x top left;
+}
+
+#search_new #header {
+  background: transparent url('/themes/Buckeye/images/bkg_home_head.png') repeat-x top left;  
+}
+
+#footer {
+  background: none;
+  color: #fff;
+  border-top: 10px solid #a7b0b6;
+}
+
+#footer div {
+  margin-top: 15px;
+}
+
+#footer a {
+  color: #fff;
+}
+
+#home_header_text p{
+  color: #c20727;
+}
+
+#flash_notice {
+  background-color: #c20727;
+  border: solid 1px #a7b0b6;
+}

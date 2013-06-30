@@ -1,0 +1,22 @@
+<% fields_for "account[data][tag][]", tag do |f| -%>
+	<div class="keywords">
+		<label>Tag:</label>
+		<%= f.text_field :name, :size => 20, :index => nil %>
+		
+		<%=
+		if object.new_record?
+      link_to_function(image_tag('bin.png', :title => "remove #{tag.name}"), "up(0).remove()")
+    else
+			tagging = tag.taggings.find_by_taggable_id_and_taggable_type @account, 'Account'
+	
+      link_to_remote(image_tag('bin.png', :title => "remove #{tag.name}"), 
+				:url => { :action => 'remove_tagging', :id => tagging.id },
+				:confirm => "Delete this tag: #{tag.name} ?",
+				:success => "up(0).remove()")
+		end
+    %>
+		<%# tagging = tag.taggings.find_by_taggable_id_and_taggable_type @business, 'Business' %>
+		<%#= remove_item_link('tag', tagging || tag, 'remove_tagging') %>
+		<%= existing_field_id(f, tag) %>
+	</div>
+<% end -%>

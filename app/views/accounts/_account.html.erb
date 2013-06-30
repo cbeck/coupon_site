@@ -1,0 +1,23 @@
+<% hide ||= false %>
+<% prefix ||= "" %>
+<% menu_id = "#{prefix}item_menu_#{account.id}" %>
+  <tr onmouseover="$('<%=menu_id%>').style.visibility='visible'" 
+  	  onmouseout="$('<%=menu_id%>').style.visibility='hidden'" class="<%= cycle("odd", "even") -%> <%= render_account_class(account) -%>" id="<%=dom_id(account)%>">
+  	<td width="60">  
+			<div id="<%=menu_id%>" class="item_menu">
+  	  <%= link_to image_tag('pencil.png', :title=>"Edit #{account.name}"), 
+  					edit_account_path(account) %>
+      <%= link_to image_tag('cut_red.png', :title=>"Manage Coupons for #{account.name}"), 
+  					account_coupon_templates_path(account) %>
+  		<%= link_to(image_tag('bin.png', :title=>"Delete #{account.name}"), account, 
+			  				:confirm => "This will delete #{account.name} from the system.\nAre you sure you want to do this?", 
+								:method => :delete) if current_user.sysadmin? %>
+  	  </div>
+  	</td>
+    <td><%=link_to account.name, account %></td>
+    <td><%= account.affiliate.name %>
+    <% unless hide %>
+    <td><%=h account.billing_name %></td>
+    <td><%=h account.internal_identifier %></td>
+    <% end %>
+  </tr>

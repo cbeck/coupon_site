@@ -1,0 +1,51 @@
+<%= render :partial => "shared/large_coupon_css"%>
+<h4 class="regular">My Clipped Coupons</h4>
+
+<div id="details_container">
+  <% unless @clipped_coupons.empty? %>
+  <div id="business_details">
+    <div class="two_thirds_span">      
+        View by <%=link_to 'expiration', user_clipped_coupons_path(current_user, :sort => 'available_clipped_coupons_by_expiration'), :class => "#{'selected' if @sort.blank? || @sort == 'available_clipped_coupons_by_expiration'}"%> | 
+      	<%=link_to 'business', user_clipped_coupons_path(current_user, :sort => 'available_clipped_coupons_by_account'), :class => "#{'selected' if @sort.blank? || @sort == 'available_clipped_coupons_by_account'}"%> | 
+      	<%=link_to 'recently clipped', user_clipped_coupons_path(current_user, :sort => 'available_clipped_coupons_by_recent'), :class => "#{'selected' if @sort.blank? || @sort == 'available_clipped_coupons_by_recent'}"%>
+    </div>
+  
+    <div class="third_span last text_right middle">
+      <% form_tag search_user_clipped_coupons_path(current_user), :method => 'get' do %>
+          <%= text_field_tag :search, params[:search] %>
+          <%= submit_tag "Search", :name => nil %>
+          <%= link_to image_tag("delete_24.png", :title=>"Clear Search"), user_clipped_coupons_path(current_user)%>
+        <% end %>
+    </div>
+    <div class="clear_fix dot">&nbsp;</div>
+  
+  </div>
+    <% form_tag print_user_clipped_coupons_path(current_user), :method => :post do %>
+    <div id="mini_coupons_container">
+      <div id="mini_coupons_top">
+        
+        <div id="mini_coupons">
+          <%= submit_tag "Print Selected" %>
+          <table id="clipped_coupons_table">
+          <% @clipped_coupons.in_groups_of(4, false) do |coupon_slice| %>
+            <tr>
+              <%= render :partial => "clipped_coupon", :collection => coupon_slice %>
+            </tr>
+          <% end %> 
+          </table>
+          <div class="clear_fix"><%= submit_tag "Print Selected" %></div>       
+        </div>
+        <div class="clear_fix">&nbsp;</div>
+        
+      </div>
+    </div>
+    <div class="clear_fix">&nbsp;</div>    
+    <% end %>
+  <% else %>
+  <%= render_header %>
+  <p>You have not clipped any coupons yet.</p>
+  <%= render_footer %>
+  <% end %>
+</div>
+
+

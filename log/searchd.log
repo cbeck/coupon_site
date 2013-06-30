@@ -1,0 +1,101 @@
+[Sun Mar  8 11:45:01.530 2009] [ 2875] creating server socket on 127.0.0.1:3312
+[Sun Mar  8 11:45:01.530 2009] [ 2875] accepting connections
+[Sun Mar  8 14:54:23.626 2009] [ 2875] rotating indices (seamless=1)
+[Sun Mar  8 14:54:23.661 2009] [ 2875] rotating index 'business_core': success
+[Sun Mar  8 14:54:23.661 2009] [ 2875] rotating finished
+[Sun Mar  8 14:54:43.806 2009] [ 2875] caught SIGTERM, shutting down
+[Sun Mar  8 14:54:43.808 2009] [ 2875] shutdown complete
+[Sun Mar  8 14:54:43.816 2009] [ 4681] creating server socket on 127.0.0.1:3312
+[Sun Mar  8 14:54:43.817 2009] [ 4681] accepting connections
+[Mon Mar  9 02:47:33.730 2009] [ 4681] rotating indices (seamless=1)
+[Mon Mar  9 02:47:33.752 2009] [ 4681] rotating index 'business_core': success
+[Mon Mar  9 02:47:33.752 2009] [ 4681] rotating finished
+[Mon Mar  9 14:48:55.880 2009] [ 4681] caught SIGTERM, shutting down
+[Mon Mar  9 14:48:55.898 2009] [ 4681] shutdown complete
+[Tue Mar 10 15:10:04.562 2009] [  499] creating server socket on 127.0.0.1:3312
+[Tue Mar 10 15:10:04.572 2009] [  499] accepting connections
+[Tue Mar 24 15:01:54.074 2009] [  540] creating server socket on 127.0.0.1:3312
+[Tue Mar 24 15:01:54.086 2009] [  540] accepting connections
+[Thu Mar 26 16:33:30.184 2009] [  540] caught SIGTERM, shutting down
+[Thu Mar 26 16:33:30.230 2009] [  540] shutdown complete
+[Fri Mar 27 14:32:22.102 2009] [  387] creating server socket on 127.0.0.1:3312
+[Fri Mar 27 14:32:22.114 2009] [  387] accepting connections
+[Tue Mar 31 18:09:35.189 2009] [  387] caught SIGTERM, shutting down
+[Tue Mar 31 18:09:35.370 2009] [  387] shutdown complete
+[Wed Apr  8 09:40:28.279 2009] [13131] creating server socket on 127.0.0.1:3312
+[Wed Apr  8 09:40:28.310 2009] [13131] accepting connections
+[Fri Apr 10 22:21:04.297 2009] [13131] caught SIGTERM, shutting down
+[Fri Apr 10 22:21:04.695 2009] [13131] shutdown complete
+[Thu Apr 16 13:54:24.347 2009] [  308] creating server socket on 127.0.0.1:3312
+[Thu Apr 16 13:54:24.358 2009] [  308] accepting connections
+[Mon Apr 20 08:58:28.048 2009] [  308] caught SIGTERM, shutting down
+[Mon Apr 20 08:58:28.221 2009] [  308] shutdown complete
+[Mon Apr 20 09:01:57.489 2009] [  308] creating server socket on 127.0.0.1:3312
+[Mon Apr 20 09:01:57.501 2009] [  308] accepting connections
+[Mon Apr 27 17:29:41.554 2009] [ 2022] creating server socket on 127.0.0.1:3312
+[Mon Apr 27 17:29:41.565 2009] [ 2022] accepting connections
+[Sat May  2 23:41:17.086 2009] [ 2022] caught SIGTERM, shutting down
+[Sat May  2 23:41:17.187 2009] [ 2022] shutdown complete
+[Sun May 17 16:26:39.998 2009] [ 6096] creating server socket on 127.0.0.1:3312
+[Sun May 17 16:26:40.008 2009] [ 6096] accepting connections
+[Mon Jun  1 10:12:28.891 2009] [ 1079] creating server socket on 127.0.0.1:3312
+[Mon Jun  1 10:12:28.898 2009] [ 1079] accepting connections
+[Mon Jun  1 16:39:50.271 2009] [ 1079] caught SIGTERM, shutting down
+[Mon Jun  1 16:39:50.325 2009] [ 1079] shutdown complete
+[Tue Jun  2 15:18:20.162 2009] [ 2305] creating server socket on 127.0.0.1:3312
+[Tue Jun  2 15:18:20.173 2009] [ 2305] accepting connections
+[Tue Jun  2 16:53:24.457 2009] [ 2305] caught SIGTERM, shutting down
+[Tue Jun  2 16:53:54.969 2009] [ 2305] shutdown complete
+[Wed Jun  3 10:39:49.664 2009] [ 1022] creating server socket on 127.0.0.1:3312
+[Wed Jun  3 10:39:49.696 2009] [ 1022] accepting connections
+[Wed Jun 17 23:10:45.095 2009] [ 2942] creating server socket on 127.0.0.1:3312
+[Wed Jun 17 23:10:45.120 2009] [ 2942] accepting connections
+[Thu Jun 18 15:42:21.768 2009] [ 2942] caught SIGTERM, shutting down
+[Thu Jun 18 15:42:21.910 2009] [ 2942] shutdown complete
+[Thu Jun 18 15:43:12.924 2009] [ 4220] creating server socket on 127.0.0.1:3312
+[Thu Jun 18 15:43:12.924 2009] [ 4220] accepting connections
+[Wed Jun 24 09:36:59.235 2009] [ 1386] creating server socket on 127.0.0.1:3312
+[Wed Jun 24 09:36:59.242 2009] [ 1386] accepting connections
+[Mon Jun 29 07:36:24.667 2009] [  446] creating server socket on 127.0.0.1:3312
+[Mon Jun 29 07:36:24.675 2009] [  446] accepting connections
+[Wed Jul  1 09:30:27.067 2009] [  446] caught SIGTERM, shutting down
+[Wed Jul  1 09:30:27.236 2009] [  446] shutdown complete
+[Sat Aug 22 19:36:45.854 2009] [ 6353] creating server socket on 127.0.0.1:3312
+[Sat Aug 22 19:36:45.914 2009] [ 6353] accepting connections
+[Sat Aug 22 19:38:00.558 2009] [ 6353] caught SIGTERM, shutting down
+[Sat Aug 22 19:38:00.570 2009] [ 6353] shutdown complete
+[Sat Aug 22 19:38:30.836 2009] [ 6435] creating server socket on 127.0.0.1:3312
+[Sat Aug 22 19:38:30.845 2009] [ 6435] accepting connections
+[Tue Aug 25 08:41:11.684 2009] [ 6435] caught SIGTERM, shutting down
+[Tue Aug 25 08:41:12.339 2009] [ 6435] shutdown complete
+[Wed Sep  2 11:23:54.977 2009] [27016] creating server socket on 127.0.0.1:3312
+[Wed Sep  2 11:23:54.993 2009] [27016] accepting connections
+[Wed Sep  9 08:22:47.887 2009] [  446] creating server socket on 127.0.0.1:3312
+[Wed Sep  9 08:22:47.904 2009] [  446] accepting connections
+[Mon Sep 14 13:53:39.088 2009] [ 1586] creating server socket on 127.0.0.1:3312
+[Mon Sep 14 13:53:39.106 2009] [ 1586] accepting connections
+[Tue Sep 22 09:24:27.455 2009] [54384] creating server socket on 127.0.0.1:3312
+[Tue Sep 22 09:24:27.473 2009] [54384] accepting connections
+[Tue Sep 22 12:00:01.514 2009] [54384] caught SIGTERM, shutting down
+[Tue Sep 22 12:00:01.692 2009] [54384] shutdown complete
+[Tue Sep 22 14:11:15.275 2009] [  312] creating server socket on 127.0.0.1:3312
+[Tue Sep 22 14:11:15.294 2009] [  312] accepting connections
+[Tue Sep 22 21:25:17.251 2009] [  312] caught SIGTERM, shutting down
+[Tue Sep 22 21:25:17.251 2009] [  312] shutdown complete
+[Wed Sep 23 09:25:07.158 2009] [  789] creating server socket on 127.0.0.1:3312
+[Wed Sep 23 09:25:07.176 2009] [  789] accepting connections
+[Wed Sep 23 13:58:34.369 2009] [  789] caught SIGTERM, shutting down
+[Wed Sep 23 13:58:34.422 2009] [  789] shutdown complete
+[Mon Sep 28 09:06:51.919 2009] [12799] creating server socket on 127.0.0.1:3312
+[Mon Sep 28 09:06:51.938 2009] [12799] accepting connections
+[Wed Sep 30 08:52:54.319 2009] [  323] creating server socket on 127.0.0.1:3312
+[Wed Sep 30 08:52:54.337 2009] [  323] accepting connections
+[Wed Sep 30 17:56:47.776 2009] [  323] caught SIGTERM, shutting down
+[Wed Sep 30 17:56:47.800 2009] [  323] shutdown complete
+[Thu Oct  8 12:51:29.608 2009] [ 2790] creating server socket on 127.0.0.1:3312
+[Thu Oct  8 12:51:29.642 2009] [ 2790] accepting connections
+[Wed Oct 14 10:06:30.725 2009] [10914] creating server socket on 127.0.0.1:3312
+[Wed Oct 14 10:06:30.744 2009] [10914] accepting connections
+[Mon Nov  9 13:25:49.141 2009] [76012] creating server socket on 127.0.0.1:3312
+[Mon Nov  9 13:25:49.166 2009] [76012] accepting connections
+[Sun May  2 17:11:46.997 2010] [ 4158] accepting connections

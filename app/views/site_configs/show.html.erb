@@ -1,0 +1,20 @@
+<% @title = @site_config.name %>
+
+<p>
+  <strong>Value:</strong>
+  <%=h @site_config.value %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%=h @site_config.description %>
+</p>
+<p>
+  <strong>Position:</strong>
+  <%=h @site_config.position %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_site_config_path(@site_config) %> |
+  <%= link_to "Destroy", @site_config, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", site_configs_path %>
+</p>

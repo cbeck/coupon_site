@@ -1,0 +1,54 @@
+<% @title = @domain.display_name %>
+<div class="admin_form margin_top_10">
+  <h2>Basic Domain Info</h2>
+<p>
+  <b>Url:</b>
+  <%=h @domain.url %>
+</p>
+
+<p>
+  <b>Theme:</b>
+  <%=h @domain.theme_name %>
+</p>
+
+<p>
+  <b>Affiliate group:</b>
+  <%=h @domain.affiliate_group_id %>
+</p>
+
+<p>
+  <b>Google API key:</b>
+  <%=@domain.google_map_key %>  
+</p>
+<p>
+  <em>Important Note: The Google API key must be signed up for on a per-domain basis. You can request one for this domain <%= link_to "here", "http://code.google.com/apis/maps" %>.</em>
+</p>
+</div>
+<div class="admin_form" id="media">
+  <h2>Domain Logo <%=add_item_link :form, 'image', Image.new, 'logo', 'submit'%></h2> 
+  <p>This logo will be displayed on all coupons that are on the site reached via this domain.</p>
+	<div class="form">
+	  <% form_for @domain, :html => { :multipart => true } do |f| %>
+		<div id="form"></div>
+		<p style="display:none;" id="submit"><%= submit_tag "Add Image" %></p>
+		<% end %>			
+	</div>
+	<div class="gallery_images">
+	  <p>You can re-order your logos by dragging them up and down in the list. The order will be automatically saved. The active logo should be first.</p>
+		<ul id="images">
+			<% @domain.images.each do |image| %>
+			<li id="image_<%=image.id%>">
+				<%= render :partial => 'image', :object => image %>
+			</li>
+			<% end -%>
+		</ul>
+	</div>
+</div>
+
+<%= sortable_element 'images',
+:url => { :action => "sort_images" , :id => @domain.id },
+:complete => visual_effect(:highlight, 'images')
+%>
+
+<%= link_to 'Edit this domain', edit_domain_path(@domain) %> |
+<%= link_to 'View all domains', domains_path %>

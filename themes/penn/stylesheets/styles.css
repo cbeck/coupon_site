@@ -1,0 +1,61 @@
+body {
+  background-color: #002a19;
+}
+
+a {
+  color: #008c55;
+}
+
+#search_form {
+  background: transparent url('/themes/penn/images/bkg_head_search.png') no-repeat top left;
+}
+
+#search_new #search_form {
+  background: transparent url('/themes/penn/images/bkg_home_head_search.png') no-repeat top left;  
+}
+
+#home_tabs {
+  background: transparent url('/themes/penn/images/home_tabs_1.png') no-repeat bottom left;
+}
+
+#home_tabs.tab_set_2 {
+  background-image: url('/themes/penn/images/home_tabs_2.png');
+}
+
+#home_tabs.tab_set_3 {
+  background-image: url('/themes/penn/images/home_tabs_3.png');
+}
+
+#home_tabs.tab_set_4 {
+  background-image: url('/themes/penn/images/home_tabs_4.png');
+}
+
+#home_tabs.tab_set_5 {
+  background-image: url('/themes/penn/images/home_tabs_5.png');
+}
+
+#home_tabs.tab_set_6 {
+  background-image: url('/themes/penn/images/home_tabs_6.png');
+}
+
+#footer {
+	color: #778998;
+	background: #001e38 url('/themes/penn/images/bkg_foot.png') repeat-x top left;
+}
+
+div#mini_coupons_container, div#text_container {
+  background: transparent url('/themes/penn/images/bkg_mini_coupons.png') no-repeat bottom right;
+}
+
+#flash_msg {
+	color: #696B64;
+}
+
+
+#home_secondary_nav li a {
+  color: #fff;
+}
+
+#search_form a {
+  color: #fff;
+}

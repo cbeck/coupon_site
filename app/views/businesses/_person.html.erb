@@ -1,0 +1,10 @@
+<% fields_for "business[data][person][]", person do |f| -%>
+		<div class="point_of_contact" id="<%= dom_id(person)%>">
+			<label>First:</label> <%= f.text_field :first_name, :size => 10, :index => nil %>
+			<label>Last:</label> <%= f.text_field :last_name, :size => 15, :index => nil %>
+			<% unless person.required -%>
+				<%= remove_item_link('person', person, 'remove_person', "#{dom_id(person)}") %>
+			<% end -%>
+			<%= existing_field_id(f, person) %> 
+		</div>
+<% end -%>

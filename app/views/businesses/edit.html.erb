@@ -1,0 +1,23 @@
+<% content_for(:page_scripts) do %>
+<script>
+$$(".trash_can").invoke("observe", "click", function(e){ 
+     e.element().up().remove(); 
+});
+</script>
+<% end %>
+<% @title = "Edit Location Info for #{@business.name}" %>
+
+<%= nested_error_messages_for :business %>
+
+<% form_for([@account, @business], :html => { :multipart => true }) do |f| -%>
+	<%=render :partial => 'form', :object => f %>
+
+	<div id="submit" style="clear: both; padding-top: 1em; text-align: center;">
+	 	<%= f.submit "Update" %> 
+	 	<p> <%= link_to 'Cancel editing and show this location', [@account, @business] %> |
+  	<%= link_to 'Cancel editing and show all locations', account_businesses_path(@account) %></p>
+	</div>
+<% end -%>
+
+
+

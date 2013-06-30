@@ -1,0 +1,36 @@
+<% @title = "Editing #{@account.name}" %>
+
+<% form_for(@account) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :billing_name %><br />
+    <%= f.text_field :billing_name %>
+  </p>
+  <p>
+    <%= f.label :internal_identifier %><br />
+    <%= f.text_field :internal_identifier %>
+  </p>
+  <p>
+    <%= f.label :affiliate_id %><br/>
+    <%= f.collection_select :affiliate_id, Affiliate.all, :id, :name, {:prompt => true} %>
+  </p>
+
+	<div class="form-outer">
+		<h3>Keywords <%=add_item_link :tags, 'tag', Tag.new, 'tag' %></h3>
+		<div id="tags">
+			<%= render :partial => 'tag', :collection => @account.tags %>
+		</div>
+	</div>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Cancel editing and view this account', @account %> |
+<%= link_to 'Cancel editing and go back to account list', accounts_path %>

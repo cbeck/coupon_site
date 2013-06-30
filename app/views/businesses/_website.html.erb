@@ -1,0 +1,8 @@
+<% fields_for "business[data][website][]", website do |f| -%>
+	<div class="point_of_contact" id="<%= dom_id(website) -%>">
+		<label>URL:</label>			
+		<%= f.text_field :url, :size => 45, :index => nil %>
+		<%= remove_item_link('website', website, 'remove_website', "#{dom_id(website)}") %>
+		<%= existing_field_id(f, website) %>
+	</div>
+<% end -%>

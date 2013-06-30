@@ -1,0 +1,14 @@
+<% if google_maps?(location) -%>
+<div id="mapbox" class="side_box">
+  <h4>Map to Your Location</h4>
+		<div id="map"></div>
+		<div class="geo">
+	     Longitude: <span class="longitude"><%=location.longitude%></span>,
+			 Latitude: <span class="latitude"><%=location.latitude%></span>
+	  </div>
+		
+		<!--><p><strong>Get Driving Directions</strong><br/>
+			<a href="">To this location</a> | <a href="">From this location</a>	
+		</p>-->
+</div>
+<% end -%>
